@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 PC Games You Should Play in 2026",
+    "slug": "top-10-pc-games-you-should-play-in-2026",
+    "category": "PC Gaming",
+    "author": "GameStore Team",
+    "date": "2026-08-25",
+    "readTime": "6 min read",
+    "image": "/images/games/blog1.webp",
+    "shortDescription": "Discover the top PC games that every gamer should experience in 2026.",
+    "content": "PC gaming continues to evolve with amazing graphics, exciting gameplay, and immersive worlds. In 2026, gamers have plenty of great titles to choose from.\n\nWhether you enjoy action, adventure, RPG, racing, or multiplayer games, there is something for everyone.\n\nBefore buying a new game, always check its system requirements and make sure your PC can run it smoothly.",
+    "tags": [
+      "PC Games",
+      "Gaming",
+      "2026",
+      "Games"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "How to Choose the Right Gaming PC",
+    "slug": "how-to-choose-the-right-gaming-pc",
+    "category": "Gaming Hardware",
+    "author": "GameStore Team",
+    "date": "2026-08-28",
+    "readTime": "5 min read",
+    "image": "/images/games/blog2.jpg",
+    "shortDescription": "A simple guide to choosing the right gaming PC for your favorite games.",
+    "content": "Choosing a gaming PC can be difficult when there are so many hardware options available.\n\nThe most important components to consider are the processor, graphics card, RAM, storage, and power supply.\n\nIf you want to play modern games at high settings, investing in a good graphics card and enough RAM is important.\n\nYou should also consider future upgrades when choosing your gaming PC.",
+    "tags": [
+      "Gaming PC",
+      "Hardware",
+      "GPU",
+      "CPU"
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import "tailwindcss";
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@theme {
+  --color-header: #2D3238;
+  --color-sidebar: #0F172A;
+  --color-text: #FFFFFF;
+  --color-button: #3B82F6;
+  --color-heading: #FF6916;
+  --color-text-main: #334155;
+  --color-success: #22C55E;
+  --color-danger: #EF4444;
+  --color-background: #24272D;
+  --color-input: #1E2126;
+
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-color:#24272D ;
+  color: #ffff;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1E2126 inset !important;
+  box-shadow: 0 0 0px 1000px #1E2126 inset !important;
+  background-color: #1E2126 !important;
+  background-image: none !important;
+  caret-color: #ffffff !important;
+  transition: background-color 9999s ease-out 0s !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
