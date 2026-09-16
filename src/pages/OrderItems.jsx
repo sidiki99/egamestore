@@ -153,15 +153,14 @@ function OrderItems() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-2">
-
-            <button className="flex items-center gap-1 bg-orange-500 hover:bg-orange-600 text-white text-xs px-2 py-1.5 rounded-md"
+            {currentUser.role === "users" &&(
+              <button className="flex items-center gap-1 bg-orange-500 hover:bg-orange-600 text-white text-xs px-2 py-1.5 rounded-md"
             onClick={() => navigate("/checkout")}>
               <FaRotate />
               Order again
-            </button>
+            </button>         
 
-           
-
+            )}
            
 
           </div>

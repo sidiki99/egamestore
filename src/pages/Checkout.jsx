@@ -1,12 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaPlus, FaChevronDown } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
-  
-  const [formData, setFormData] = useState({
+   const [formData, setFormData] = useState({
     firstName: "",
     secondName: "",
     companyName: "",
@@ -16,14 +15,63 @@ const Checkout = () => {
     state: "",
     zipCode: "",
     phone: "",
-   
-   
-  });
+  }); 
+
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-   if (!currentUser) {
-        return;
-      }
-      const userEmail=currentUser.email;
+const userEmail = currentUser.email;
+ useEffect(() => {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  
+
+  if (!currentUser) return;
+
+  const userEmail = currentUser.email;
+
+  const checkoutData =
+    JSON.parse(localStorage.getItem("checkoutData")) || {};
+
+  const savedCheckout = checkoutData[userEmail]?.billingDetails;
+
+  if (savedCheckout) {
+    setFormData({
+      firstName: savedCheckout.firstName || "",
+      secondName: savedCheckout.secondName || "",
+      companyName: savedCheckout.companyName || "",
+      country: savedCheckout.country || "",
+      streetAddress: savedCheckout.streetAddress || "",
+      city: savedCheckout.city || "",
+      state: savedCheckout.state || "",
+      zipCode: savedCheckout.zipCode || "",
+      phone: savedCheckout.phone || "",
+    });
+
+    return;
+  }
+
+  const profiles =
+    JSON.parse(localStorage.getItem("Profile")) || [];
+
+  const userProfile = profiles.find(
+    (profile) => profile.email === userEmail
+  );
+
+
+  if (userProfile) {
+    const nameParts = userProfile.name?.trim().split(" ") || [];
+
+    setFormData({
+      firstName: nameParts[0] || "",
+      secondName: nameParts.slice(1).join(" ") || "",
+      companyName: "",
+      country: "",
+      streetAddress: "",
+      city: "",
+      state: "",
+      zipCode: "",
+      phone: userProfile.phone || "",
+    });
+  }
+}, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,76 +82,158 @@ const Checkout = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-      e?.preventDefault();
-  const existingData =
-    JSON.parse(localStorage.getItem("checkoutData")) || {};
-   if (
-  !formData.firstName ||
-  !formData.secondName ||
- 
-  !formData.phone ||
-  !formData.zipCode ||
-  !formData.country ||
-  !formData.city
-) {
-  toast.error("Please fill all required fields");
-  return false;
-}
-if(formData.phone.length !== 11){
-  toast.error("Phone no. must be 11 characters")
-  return
-}
+ const handleSubmit = (e) => {
+  e?.preventDefault();
 
- 
-  const checkoutData = {
-    ...existingData,
+  if (
+    !formData.firstName ||
+    !formData.secondName ||
+    !formData.phone ||
+    !formData.zipCode ||
+    !formData.country ||
+    !formData.city ||
+    !formData.streetAddress ||
+    !formData.state
+  ) {
+    toast.error("Please fill all required fields");
+    return false;
+  }
+
+  if (formData.phone.length !== 11) {
+    toast.error("Phone no. must be 11 characters");
+    return false;
+  }
+
+  const checkoutData = JSON.parse(localStorage.getItem("checkoutData")) || {};
+
+  checkoutData[userEmail] = {
     billingDetails: {
-      ...existingData.billingDetails,
       ...formData,
       userEmail,
-      selectedCard: existingData.billingDetails?.selectedCard || null,
     },
+    selectedCard:
+      checkoutData[userEmail]?.selectedCard || null,
   };
 
-  localStorage.setItem("checkoutData", JSON.stringify(checkoutData)
-  );
+  localStorage.setItem("checkoutData",  JSON.stringify(checkoutData));
+
   return true;
 };
+
   return (
     <section className="px-4 md:px-20">
+       <h1 className="font-semibold text-md md:text-xl">
+                Billing Details
+              </h1>
+
       <div className="flex flex-col md:flex-row gap-5 mt-5">
+        
 
-        <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 gap-4">
+      <form onSubmit={handleSubmit} className="w-full md:w-2/3 grid grid-cols-1 gap-4">
 
-          <h1 className="font-semibold text-md md:text-xl">
-            Billing Details
-          </h1>
+             
+              {/* First + Second Name */}
+              <div className="flex flex-col md:flex-row gap-4">
+                <input
+                  type="text"
+                  name="firstName"
+                  required
+                  placeholder="First Name *"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+                />
 
-          <div className="flex flex-col md:flex-row justify-between gap-3 mt-3">
-            <input type="text" name="firstName" required placeholder="First Name *" value={formData.firstName} onChange={handleChange} className="text-white px-4 py-3 rounded-md outline-none bg-input w-full text-sm md:text-md" />
+                <input
+                  type="text"
+                  name="secondName"
+                  required
+                  placeholder="Second Name *"
+                  value={formData.secondName}
+                  onChange={handleChange}
+                  className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+                />
+              </div>
 
-            <input type="text" name="secondName" required placeholder="Second Name *" value={formData.secondName} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
-          </div>
+              {/* Company */}
+              <input
+                type="text"
+                name="companyName"
+                placeholder="Company Name (optional)"
+                value={formData.companyName}
+                onChange={handleChange}
+                className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+              />
 
-          <input type="text" name="companyName" placeholder="Company Name (optional)" value={formData.companyName} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
+              {/* Country */}
+              <input
+                type="text"
+                name="country"
+                required
+                placeholder="Country/Region *"
+                value={formData.country}
+                onChange={handleChange}
+                className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+              />
 
-          <input type="text" name="country" required placeholder="Country/Region *" value={formData.country} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
+              {/* Street Address */}
+              <input
+                type="text"
+                name="streetAddress"
+                required
+                placeholder="Street Address *"
+                value={formData.streetAddress}
+                onChange={handleChange}
+                className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+              />
 
-          <input type="text" name="streetAddress" required placeholder="Street Address *" value={formData.streetAddress} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
+              {/* City */}
+              <input
+                type="text"
+                name="city"
+                required
+                placeholder="City *"
+                value={formData.city}
+                onChange={handleChange}
+                className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+              />
 
-          <input type="text" name="city" required placeholder="City *" value={formData.city} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
+              {/* State */}
+              <input
+                type="text"
+                name="state"
+                required
+                placeholder="State/Country *"
+                value={formData.state}
+                onChange={handleChange}
+                className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+              />
 
-          <input type="text" name="state" required placeholder="State/Country *" value={formData.state} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
+              {/* Zip Code */}
+              <input
+                type="text"
+                name="zipCode"
+                required
+                placeholder="Zip Code *"
+                value={formData.zipCode}
+                onChange={handleChange}
+                className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+              />
 
-          <input type="text" name="zipCode" required placeholder="Zip Code *" value={formData.zipCode} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
+              {/* Phone */}
+              <input
+                type="tel"
+                name="phone"
+                required
+                placeholder="Phone *"
+                value={formData.phone}
+                onChange={handleChange}
+                className="h-11 px-4 bg-input text-white w-full rounded-md outline-none text-sm md:text-md"
+              />
 
-          <input type="tel" name="phone" required placeholder="Phone *" value={formData.phone} onChange={handleChange} className="px-2 py-2 bg-input w-full rounded-xl outline-0 text-sm md:text-md" />
+            </form>
 
-          
-        </form>
-
-        <div className="w-full">
+        <div className="w-full md:w-1/3">
           <PaymentMethod 
           formData={formData}
            handleSubmit={handleSubmit}

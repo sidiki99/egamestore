@@ -1,3 +1,4 @@
+
 [
   {
     "id": 1,
@@ -9,7 +10,7 @@
     "readTime": "6 min read",
     "image": "/images/games/blog1.webp",
     "shortDescription": "Discover the top PC games that every gamer should experience in 2026.",
-    "content": "PC gaming continues to evolve with amazing graphics, exciting gameplay, and immersive worlds. In 2026, gamers have plenty of great titles to choose from.\n\nWhether you enjoy action, adventure, RPG, racing, or multiplayer games, there is something for everyone.\n\nBefore buying a new game, always check its system requirements and make sure your PC can run it smoothly.",
+    "content": "PC gaming continues to evolve with amazing graphics, exciting gameplay, and immersive worlds. In 2026, gamers have plenty of great titles to choose from.\n\nAction games provide exciting combat and fast gameplay, while adventure and RPG games offer large worlds to explore. Multiplayer games are also becoming more popular because they allow players to compete and play with friends.\n\nBefore buying a new game, always check its system requirements and make sure your PC can run it smoothly.\n\nA good gaming experience depends not only on the game itself but also on having suitable hardware, enough storage, and a stable internet connection for online games.",
     "tags": [
       "PC Games",
       "Gaming",
@@ -27,12 +28,193 @@
     "readTime": "5 min read",
     "image": "/images/games/blog2.jpg",
     "shortDescription": "A simple guide to choosing the right gaming PC for your favorite games.",
-    "content": "Choosing a gaming PC can be difficult when there are so many hardware options available.\n\nThe most important components to consider are the processor, graphics card, RAM, storage, and power supply.\n\nIf you want to play modern games at high settings, investing in a good graphics card and enough RAM is important.\n\nYou should also consider future upgrades when choosing your gaming PC.",
+    "content": "Choosing a gaming PC can be difficult when there are so many hardware options available.\n\nThe most important components to consider are the processor, graphics card, RAM, storage, and power supply. Each component has an important role in gaming performance.\n\nIf you want to play modern games at high settings, investing in a good graphics card and enough RAM is important. A powerful processor is also useful for games that require high CPU performance.\n\nYou should also consider future upgrades when choosing your gaming PC. A system with upgradeable RAM, storage, and other components can help you keep your computer useful for a longer period.",
     "tags": [
       "Gaming PC",
       "Hardware",
       "GPU",
       "CPU"
     ]
+  },
+  {
+    "id": 3,
+    "title": "Best Gaming Accessories Every Gamer Should Have",
+    "slug": "best-gaming-accessories-every-gamer-should-have",
+    "category": "Gaming Accessories",
+    "author": "GameStore Team",
+    "date": "2026-08-30",
+    "readTime": "5 min read",
+    "image": "../src/assets/images/blog6.jfif",
+    "shortDescription": "Upgrade your gaming setup with these useful accessories and peripherals.",
+    "content": "A good gaming setup is not complete without the right accessories. Gaming peripherals can improve comfort, control, and the overall gaming experience.\n\nA responsive gaming mouse is useful for competitive games, especially first-person shooters. A mechanical keyboard can provide faster and more accurate input while also making long gaming sessions more comfortable.\n\nA good gaming headset is another important accessory. It can provide clear game audio and allow you to communicate with teammates during multiplayer matches.\n\nYou can also improve your setup with a large mouse pad, comfortable gaming chair, and a quality monitor. The best accessories are the ones that match your gaming style and personal requirements.",
+    "tags": [
+      "Gaming Accessories",
+      "Mouse",
+      "Keyboard",
+      "Headset"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "PC Gaming vs PlayStation: Which Is Better?",
+    "slug": "pc-gaming-vs-playstation-which-is-better",
+    "category": "Gaming",
+    "author": "GameStore Team",
+    "date": "2026-09-01",
+    "readTime": "7 min read",
+     "image": "../src/assets/images/news2.jpg",
+    "shortDescription": "Compare PC gaming and PlayStation to find the best platform for your gaming style.",
+    "content": "PC and PlayStation are two of the most popular gaming platforms, but both offer different advantages.\n\nPC gaming provides more hardware flexibility, customization, graphics settings, and upgrade options. Players can choose different processors, graphics cards, monitors, keyboards, and other components according to their budget.\n\nPlayStation provides a simpler gaming experience. Players do not need to worry about hardware upgrades and can start playing after connecting the console to a display.\n\nThe best choice depends on your preferences. If you enjoy customization and upgrading hardware, a gaming PC may be the better option. If you prefer a simple console experience, PlayStation can be an excellent choice.",
+    "tags": [
+      "PC Gaming",
+      "PlayStation",
+      "Gaming",
+      "Comparison"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "How to Improve Your FPS in PC Games",
+    "slug": "how-to-improve-your-fps-in-pc-games",
+    "category": "Gaming Tips",
+    "author": "GameStore Team",
+    "date": "2026-09-03",
+    "readTime": "6 min read",
+      "image": "../src/assets/images/news3.jpg",
+    "shortDescription": "Learn simple ways to improve FPS and get smoother performance in PC games.",
+    "content": "Low FPS can make games feel slow and uncomfortable, especially during competitive matches. Fortunately, there are several ways to improve gaming performance.\n\nStart by checking your game's graphics settings. Reducing options such as shadows, reflections, and advanced effects can improve FPS without significantly affecting gameplay.\n\nMake sure your graphics drivers are updated and close unnecessary applications running in the background. You should also keep enough free storage space on your system.\n\nIf your PC still struggles with modern games, upgrading your RAM or graphics card may provide a significant performance improvement.",
+    "tags": [
+      "FPS",
+      "Gaming Tips",
+      "Performance",
+      "PC Gaming"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Why SSD Storage Is Important for Gaming",
+    "slug": "why-ssd-storage-is-important-for-gaming",
+    "category": "Gaming Hardware",
+    "author": "GameStore Team",
+    "date": "2026-09-05",
+    "readTime": "5 min read",
+     "image": "../src/assets/images/blog5.jfif",
+    "shortDescription": "Learn why SSD storage can make your gaming experience faster and smoother.",
+    "content": "Storage plays an important role in modern gaming. While traditional hard drives can still store games, SSDs provide much faster read and write speeds.\n\nGames installed on an SSD can generally load faster, which means shorter loading screens and quicker access to game worlds.\n\nModern games can also require a large amount of storage space, so choosing an SSD with enough capacity is important. A larger SSD allows you to keep multiple games installed without constantly removing older titles.\n\nFor a new gaming PC, an SSD is a valuable upgrade that can improve everyday system responsiveness as well as gaming load times.",
+    "tags": [
+      "SSD",
+      "Storage",
+      "Gaming Hardware",
+      "PC Gaming"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Top 10 PC Games You Should Play in 2026",
+    "slug": "top-10-pc-games-you-should-play-in-2026",
+    "category": "PC Gaming",
+    "author": "GameStore Team",
+    "date": "2026-08-25",
+    "readTime": "6 min read",
+    "image": "/images/games/blog1.webp",
+    "shortDescription": "Discover the top PC games that every gamer should experience in 2026.",
+    "content": "PC gaming continues to evolve with amazing graphics, exciting gameplay, and immersive worlds. In 2026, gamers have plenty of great titles to choose from.\n\nAction games provide exciting combat and fast gameplay, while adventure and RPG games offer large worlds to explore. Multiplayer games are also becoming more popular because they allow players to compete and play with friends.\n\nBefore buying a new game, always check its system requirements and make sure your PC can run it smoothly.\n\nA good gaming experience depends not only on the game itself but also on having suitable hardware, enough storage, and a stable internet connection for online games.",
+    "tags": [
+      "PC Games",
+      "Gaming",
+      "2026",
+      "Games"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "How to Choose the Right Gaming PC",
+    "slug": "how-to-choose-the-right-gaming-pc",
+    "category": "Gaming Hardware",
+    "author": "GameStore Team",
+    "date": "2026-08-28",
+    "readTime": "5 min read",
+    "image": "/images/games/blog2.jpg",
+    "shortDescription": "A simple guide to choosing the right gaming PC for your favorite games.",
+    "content": "Choosing a gaming PC can be difficult when there are so many hardware options available.\n\nThe most important components to consider are the processor, graphics card, RAM, storage, and power supply. Each component has an important role in gaming performance.\n\nIf you want to play modern games at high settings, investing in a good graphics card and enough RAM is important. A powerful processor is also useful for games that require high CPU performance.\n\nYou should also consider future upgrades when choosing your gaming PC. A system with upgradeable RAM, storage, and other components can help you keep your computer useful for a longer period.",
+    "tags": [
+      "Gaming PC",
+      "Hardware",
+      "GPU",
+      "CPU"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Best Gaming Accessories Every Gamer Should Have",
+    "slug": "best-gaming-accessories-every-gamer-should-have",
+    "category": "Gaming Accessories",
+    "author": "GameStore Team",
+    "date": "2026-08-30",
+    "readTime": "5 min read",
+    "image": "../src/assets/images/blog6.jfif",
+    "shortDescription": "Upgrade your gaming setup with these useful accessories and peripherals.",
+    "content": "A good gaming setup is not complete without the right accessories. Gaming peripherals can improve comfort, control, and the overall gaming experience.\n\nA responsive gaming mouse is useful for competitive games, especially first-person shooters. A mechanical keyboard can provide faster and more accurate input while also making long gaming sessions more comfortable.\n\nA good gaming headset is another important accessory. It can provide clear game audio and allow you to communicate with teammates during multiplayer matches.\n\nYou can also improve your setup with a large mouse pad, comfortable gaming chair, and a quality monitor. The best accessories are the ones that match your gaming style and personal requirements.",
+    "tags": [
+      "Gaming Accessories",
+      "Mouse",
+      "Keyboard",
+      "Headset"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "PC Gaming vs PlayStation: Which Is Better?",
+    "slug": "pc-gaming-vs-playstation-which-is-better",
+    "category": "Gaming",
+    "author": "GameStore Team",
+    "date": "2026-09-01",
+    "readTime": "7 min read",
+     "image": "../src/assets/images/news2.jpg",
+    "shortDescription": "Compare PC gaming and PlayStation to find the best platform for your gaming style.",
+    "content": "PC and PlayStation are two of the most popular gaming platforms, but both offer different advantages.\n\nPC gaming provides more hardware flexibility, customization, graphics settings, and upgrade options. Players can choose different processors, graphics cards, monitors, keyboards, and other components according to their budget.\n\nPlayStation provides a simpler gaming experience. Players do not need to worry about hardware upgrades and can start playing after connecting the console to a display.\n\nThe best choice depends on your preferences. If you enjoy customization and upgrading hardware, a gaming PC may be the better option. If you prefer a simple console experience, PlayStation can be an excellent choice.",
+    "tags": [
+      "PC Gaming",
+      "PlayStation",
+      "Gaming",
+      "Comparison"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "How to Improve Your FPS in PC Games",
+    "slug": "how-to-improve-your-fps-in-pc-games",
+    "category": "Gaming Tips",
+    "author": "GameStore Team",
+    "date": "2026-09-03",
+    "readTime": "6 min read",
+      "image": "../src/assets/images/news3.jpg",
+    "shortDescription": "Learn simple ways to improve FPS and get smoother performance in PC games.",
+    "content": "Low FPS can make games feel slow and uncomfortable, especially during competitive matches. Fortunately, there are several ways to improve gaming performance.\n\nStart by checking your game's graphics settings. Reducing options such as shadows, reflections, and advanced effects can improve FPS without significantly affecting gameplay.\n\nMake sure your graphics drivers are updated and close unnecessary applications running in the background. You should also keep enough free storage space on your system.\n\nIf your PC still struggles with modern games, upgrading your RAM or graphics card may provide a significant performance improvement.",
+    "tags": [
+      "FPS",
+      "Gaming Tips",
+      "Performance",
+      "PC Gaming"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Why SSD Storage Is Important for Gaming",
+    "slug": "why-ssd-storage-is-important-for-gaming",
+    "category": "Gaming Hardware",
+    "author": "GameStore Team",
+    "date": "2026-09-05",
+    "readTime": "5 min read",
+     "image": "../src/assets/images/blog5.jfif",
+    "shortDescription": "Learn why SSD storage can make your gaming experience faster and smoother.",
+    "content": "Storage plays an important role in modern gaming. While traditional hard drives can still store games, SSDs provide much faster read and write speeds.\n\nGames installed on an SSD can generally load faster, which means shorter loading screens and quicker access to game worlds.\n\nModern games can also require a large amount of storage space, so choosing an SSD with enough capacity is important. A larger SSD allows you to keep multiple games installed without constantly removing older titles.\n\nFor a new gaming PC, an SSD is a valuable upgrade that can improve everyday system responsiveness as well as gaming load times.",
+    "tags": [
+      "SSD",
+      "Storage",
+      "Gaming Hardware",
+      "PC Gaming"
+    ]
   }
 ]
+

@@ -1,8 +1,10 @@
 
-import logo from "../assets/images/logo.png";
+import { useNavigate } from "react-router-dom";
+import logo from "../assets/images/logo.avif";
 export default function Footer() {
+  const navigate=useNavigate();
   return (
-   <footer className="mt-20 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40 bg-[#15141B] border-t-2 border-[#888888]">
+   <footer className="mt-10 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40 bg-[#15141B] border-t-2 border-[#888888]">
   <div className="  text-[#888888] rounded-lg p-6 sm:p-8 md:p-10 lg:p-12">
     <div className="flex flex-col lg:flex-row gap-12">
       <div className="w-full lg:w-2/5">
@@ -30,16 +32,16 @@ export default function Footer() {
               Quick Links
             </h2>
             <div className="flex flex-col gap-3">
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" onClick={()=>navigate("/")}>
                 Home
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" href="#">
                 Gift Cards
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" onClick={()=>navigate("/deals")}>
                 Deals
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" onClick={()=>navigate("/blog")}>
                 Blog
               </a>
             </div>
@@ -49,16 +51,16 @@ export default function Footer() {
               Resources
             </h2>
             <div className="flex flex-col gap-3">
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" onClick={()=>navigate("/")}>
                 Trending Games
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" onClick={()=>navigate("/")}>
                 Upcoming Games
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" onClick={()=>navigate("/")}>
                 Reviews
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" href="#">
                 FAQs
               </a>
             </div>
@@ -66,16 +68,16 @@ export default function Footer() {
           <div>
             <h2 className="text-heading font-semibold text-xl mb-5">Explore</h2>
             <div className="flex flex-col gap-3">
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" href="#">
                 PC Games
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" href="#">
                 PlayStation
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" href="#">
                 Nintendo
               </a>
-              <a className="hover:text-white" href="#">
+              <a className="hover:text-white cursor-pointer" href="#">
                 Xbox
               </a>
             </div>

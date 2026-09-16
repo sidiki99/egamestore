@@ -40,29 +40,38 @@ export default function PlayStation(){
  
   const genres = [
     {
-    name: "All PlayStation",
-    count: games.filter(
-      (game) =>
-        game.category === "Adventure" ||
-        game.category === "Shooting" ||
-        game.category === "MOBA" ||
-        game.category === "Battle Royale" ||
-        game.category === "FPS"
-    ).length,
+    name: "All",
+    count:games.filter((game)=>game.rating > 90 ).length,
   },
  
-   { name: "Adventure", count: games.filter((game) => game.category === "Adventure").length },
+   { name: "Adventure", count: games.filter((game) => game.category === "Adventure" &&
+        game.rating > 90).length },
+   { name: "RPG", count: games.filter((game) => game.category === "RPG" &&
+        game.rating > 90).length },
+     { name: "Action", count: games.filter((game) => game.category === "Action" &&
+        game.rating > 90).length },
+      { name: "Tactical Shooter", count: games.filter((game) => game.category === "Tactical Shooter" &&
+        game.rating > 90).length },
+   
+   
+     { name: "Sports", count: games.filter((game) => game.category === "Sports" &&
+        game.rating > 90).length },
+   
   
 
   
-   { name: "Shooting", count: games.filter((game) => game.category === "Shooting").length },
-   { name: "MOBA", count: games.filter((game) => game.category === "MOBA").length },
-   { name: "Battle Royale", count: games.filter((game) => game.category === "Battle Royale").length },
-   { name: "FPS", count: games.filter((game) => game.category === "FPS").length },
+   { name: "Shooting", count: games.filter((game) => game.category === "Shooting" &&
+        game.rating > 90).length },
+   { name: "MOBA", count: games.filter((game) => game.category === "MOBA" &&
+        game.rating > 90).length },
+   { name: "Battle Royale", count: games.filter((game) => game.category === "Battle Royale" &&
+        game.rating > 90).length },
+   { name: "FPS", count: games.filter((game) => game.category === "FPS" &&
+        game.rating > 90).length },
    
  ];
   const handleGenreChange = (genre) => {
-   if (genre === "All PlayStation") {
+   if (genre === "All") {
       setAllGenres(true);
      setSelectedGenre([]);
      return;
@@ -82,23 +91,31 @@ export default function PlayStation(){
 //  }
 //  )
 
-const playStationCategories = [
+const allCategories = [
   "Adventure",
   "Shooting",
   "MOBA",
   "Battle Royale",
   "FPS",
+  "Sports",
+  "Adventure",
+  "Action",
+  "RPG"
+
+
 ];
 
 const filteredGames = games.filter((game) => {
-  const isPlayStationGame = playStationCategories.includes(game.category);
+  const isPlayStationGame = allCategories.includes(game.category);
+
+  const matchedRating = game.rating > 90;
 
   const matchedGenre =
     allGenres || selectedGenre.includes(game.category);
 
   const matchedPrice = game.price <= price;
 
-  return isPlayStationGame && matchedPrice && matchedGenre;
+  return isPlayStationGame && matchedRating && matchedPrice && matchedGenre;
 });
  const{currentItems,currentPage,nextPage,prevPage,totalPages,goToPage}=usePagination(filteredGames,16);
  
@@ -133,7 +150,7 @@ const filteredGames = games.filter((game) => {
              {genres.map((genre) => (
                <label key={genre.name} className="flex items-center justify-between cursor-pointer text-[14px] text-[#E5E7EB]">
                  <div className="flex items-center gap-2">
-                 <input type="checkbox" checked={genre.name === "All PlayStation" ? allGenres : selectedGenre.includes(genre.name)}
+                 <input type="checkbox" checked={genre.name === "All" ? allGenres : selectedGenre.includes(genre.name)}
                  onChange={() => handleGenreChange(genre.name)}
                   className="w-[11px] h-[11px] accent-[#FF6B00] cursor-pointer" />
                    <span>{genre.name}</span>
@@ -188,7 +205,7 @@ const filteredGames = games.filter((game) => {
        <div className="flex gap-2 items-center">
          <p>Home </p> 
          <i className="fa fa-angle-right" />
-         <p> PlayStation </p> 
+         <p> Deals </p> 
        </div>
         {/* product card */}
         <div className="grid grid-cols-2 [@media(min-width:480px)_and_(max-width:770px)]:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 md:mt-2 md:mt-5

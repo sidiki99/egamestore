@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "title": "Fortnite",
+    "faqs": [
+      {
+        "question": "What kind of game is Fortnite?",
+        "answer": "It's an action-packed battle royale game where you fight, build structures, and try to survive to become the last player standing."
+      },
+      {
+        "question": "What makes Fortnite different from other shooters?",
+        "answer": "Its signature building mechanic lets players construct forts and ramps on the fly, adding a strategic layer on top of the usual combat."
+      },
+      {
+        "question": "Is Fortnite a single-player or multiplayer game?",
+        "answer": "It's primarily a multiplayer experience, pitting players against each other in matches to see who survives until the end."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Minecraft",
+    "faqs": [
+      {
+        "question": "What can players do in Minecraft?",
+        "answer": "Players explore vast worlds, gather resources, build structures, and work to survive whatever the environment throws at them."
+      },
+      {
+        "question": "Is Minecraft more about combat or creativity?",
+        "answer": "It leans heavily on creativity and exploration, giving players a sandbox to build and shape their own worlds while still handling survival challenges."
+      },
+      {
+        "question": "Does Minecraft have an open world?",
+        "answer": "Yes, it features vast, explorable worlds full of resources and terrain for players to discover and build in."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Counter-Strike 2",
+    "faqs": [
+      {
+        "question": "What is Counter-Strike 2 about?",
+        "answer": "It's a competitive first-person shooter centered on tactical team battles between terrorists and counter-terrorists."
+      },
+      {
+        "question": "Is Counter-Strike 2 team-based?",
+        "answer": "Yes, matches are built around organized team battles that require coordination and strategy to win."
+      },
+      {
+        "question": "What style of gameplay does Counter-Strike 2 focus on?",
+        "answer": "It focuses on tactical, objective-based combat rather than fast, chaotic action, rewarding careful positioning and teamwork."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Spider-Man 2",
+    "faqs": [
+      {
+        "question": "Who are the playable characters in Spider-Man 2?",
+        "answer": "The game features both Peter Parker and Miles Morales as they work together to protect New York City."
+      },
+      {
+        "question": "What is the main goal in Spider-Man 2?",
+        "answer": "Players aim to protect New York City from powerful enemies through action-adventure gameplay and superhero combat."
+      },
+      {
+        "question": "What genre does Spider-Man 2 belong to?",
+        "answer": "It's an action-adventure game that blends combat, exploration, and story-driven superhero missions."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "The Witcher 3",
+    "faqs": [
+      {
+        "question": "Who is the main character in The Witcher 3?",
+        "answer": "Players follow Geralt of Rivia as he journeys through a dangerous fantasy world."
+      },
+      {
+        "question": "What type of game is The Witcher 3?",
+        "answer": "It's an open-world RPG that combines exploration, storytelling, and monster-hunting combat."
+      },
+      {
+        "question": "What can players expect to do in The Witcher 3?",
+        "answer": "Players explore a sprawling fantasy world, take on quests, and battle monsters as part of Geralt's journey."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Spider-Man Black",
+    "faqs": [
+      {
+        "question": "What is Spider-Man Black about?",
+        "answer": "It's an action-packed superhero adventure featuring intense combat, web-swinging exploration, and a darker new challenge for the hero."
+      },
+      {
+        "question": "Does Spider-Man Black include exploration outside of combat?",
+        "answer": "Yes, web-swinging exploration is a core part of the experience alongside its combat encounters."
+      },
+      {
+        "question": "How does Spider-Man Black differ tonally from other Spider-Man games?",
+        "answer": "It leans into a darker storyline, presenting a new and more intense challenge for the hero compared to previous entries."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Battlefield 6",
+    "faqs": [
+      {
+        "question": "What is the scale of gameplay in Battlefield 6?",
+        "answer": "It's a large-scale military shooter built around intense multiplayer battles with many players at once."
+      },
+      {
+        "question": "What tools and features does Battlefield 6 offer players?",
+        "answer": "Players get access to powerful weapons and vehicles, along with destructible environments that change how battles play out."
+      },
+      {
+        "question": "Is Battlefield 6 focused on single-player or multiplayer combat?",
+        "answer": "The game centers on multiplayer battles, emphasizing large-scale military combat between teams."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "League of Legends",
+    "faqs": [
+      {
+        "question": "What type of game is League of Legends?",
+        "answer": "It's a competitive multiplayer online battle arena (MOBA) game."
+      },
+      {
+        "question": "What is the objective in League of Legends?",
+        "answer": "Teams battle strategically with the goal of destroying the enemy base."
+      },
+      {
+        "question": "Is League of Legends played in teams?",
+        "answer": "Yes, it's a team-based competitive game where coordination between teammates is key to winning."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Apex Legends",
+    "faqs": [
+      {
+        "question": "What is Apex Legends?",
+        "answer": "It's a fast-paced battle royale shooter where teams compete using unique legends and their special abilities."
+      },
+      {
+        "question": "How do character abilities factor into Apex Legends?",
+        "answer": "Each legend brings unique abilities that teams can combine strategically to gain an edge in fights."
+      },
+      {
+        "question": "Is Apex Legends played solo or in teams?",
+        "answer": "It's built around team play, with squads competing together in fast-paced battle royale matches."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Counter-Strike",
+    "faqs": [
+      {
+        "question": "What is Counter-Strike about?",
+        "answer": "It's a tactical first-person shooter where teams compete in intense, objective-based matches."
+      },
+      {
+        "question": "What makes Counter-Strike matches intense?",
+        "answer": "The objective-based format and tactical team play create high-stakes rounds where strategy matters as much as aim."
+      },
+      {
+        "question": "Is Counter-Strike a team-based game?",
+        "answer": "Yes, it's built entirely around organized team competition."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "World of Warcraft",
+    "faqs": [
+      {
+        "question": "What kind of game is World of Warcraft?",
+        "answer": "It's a massively multiplayer online role-playing game (MMORPG) set in the fantasy world of Azeroth."
+      },
+      {
+        "question": "Where does World of Warcraft take place?",
+        "answer": "The game is set in the fantasy world of Azeroth, filled with lore, quests, and other players to interact with."
+      },
+      {
+        "question": "Can players interact with others in World of Warcraft?",
+        "answer": "Yes, as an MMORPG it's built around large-scale interaction with other players across the shared world."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Dota 2",
+    "faqs": [
+      {
+        "question": "What type of game is Dota 2?",
+        "answer": "It's a competitive MOBA where two teams of heroes battle strategically."
+      },
+      {
+        "question": "What is the win condition in Dota 2?",
+        "answer": "Teams aim to destroy the opposing team's Ancient through strategic hero battles."
+      },
+      {
+        "question": "Does Dota 2 require strategy or just fast reflexes?",
+        "answer": "Strategy plays a central role, with teams needing to coordinate and plan around hero strengths to win."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Fortnite",
+    "faqs": [
+      {
+        "question": "What is the goal in this Fortnite mode?",
+        "answer": "Players fight, build, and survive with the goal of being the last player or team remaining."
+      },
+      {
+        "question": "Is this version of Fortnite competitive?",
+        "answer": "Yes, it's framed as a competitive battle royale experience for players and teams alike."
+      },
+      {
+        "question": "Can teams play together in this Fortnite mode?",
+        "answer": "Yes, both solo players and teams can compete to be the last ones standing."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Valorant",
+    "faqs": [
+      {
+        "question": "What is Valorant?",
+        "answer": "It's a tactical competitive shooter where teams use precise gunplay and unique agent abilities to win rounds."
+      },
+      {
+        "question": "What role do agent abilities play in Valorant?",
+        "answer": "Each agent has unique abilities that add tactical options beyond just shooting, influencing how rounds are won."
+      },
+      {
+        "question": "Is Valorant focused on team strategy?",
+        "answer": "Yes, tactical teamwork combined with precise gunplay is central to winning rounds."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "PUBG: Battlegrounds",
+    "faqs": [
+      {
+        "question": "What is PUBG: Battlegrounds about?",
+        "answer": "It's a competitive battle royale game where players fight across large maps to become the last survivor or team."
+      },
+      {
+        "question": "How large are the maps in PUBG: Battlegrounds?",
+        "answer": "The game features large maps that give players plenty of room to explore, scavenge, and engage in combat."
+      },
+      {
+        "question": "Can players team up in PUBG: Battlegrounds?",
+        "answer": "Yes, players can compete solo or as part of a team to be the last ones standing."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Marvel Wolverine",
+    "faqs": [
+      {
+        "question": "Who is the main character in Marvel Wolverine?",
+        "answer": "The game is centered on Wolverine, focusing on his story and abilities."
+      },
+      {
+        "question": "What kind of gameplay does Marvel Wolverine offer?",
+        "answer": "It's an action-adventure game featuring intense combat, exploration, and a cinematic superhero story."
+      },
+      {
+        "question": "Is Marvel Wolverine available for pre-order?",
+        "answer": "Yes, it's currently listed with pre-order status ahead of its release."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Star Wars Outlaws",
+    "faqs": [
+      {
+        "question": "What is Star Wars Outlaws about?",
+        "answer": "It's an open-world adventure featuring exploration, combat, and missions set within the Star Wars universe."
+      },
+      {
+        "question": "Is Star Wars Outlaws an open-world game?",
+        "answer": "Yes, it lets players freely explore a world built around the Star Wars universe."
+      },
+      {
+        "question": "Can I pre-order Star Wars Outlaws?",
+        "answer": "Yes, it's currently available for pre-order ahead of its release date."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Grand Theft Auto V",
+    "faqs": [
+      {
+        "question": "What can players do in Grand Theft Auto V?",
+        "answer": "Players explore an expansive open-world city, take on story missions, drive vehicles, and engage in combat."
+      },
+      {
+        "question": "Does Grand Theft Auto V have online gameplay?",
+        "answer": "Yes, in addition to the story missions, the game offers online gameplay for players to enjoy."
+      },
+      {
+        "question": "Is Grand Theft Auto V open for pre-order?",
+        "answer": "Yes, this listing is currently available for pre-order."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "The Witcher 4",
+    "faqs": [
+      {
+        "question": "What can players expect from The Witcher 4?",
+        "answer": "It offers a new adventure in the Witcher universe, featuring exploration, quests, combat, and monster encounters."
+      },
+      {
+        "question": "Is The Witcher 4 connected to previous Witcher games?",
+        "answer": "It's set within the same Witcher universe, continuing the series' tradition of fantasy adventure and monster-hunting."
+      },
+      {
+        "question": "Can I pre-order The Witcher 4?",
+        "answer": "Yes, it's currently listed as available for pre-order ahead of release."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "FC25",
+    "faqs": [
+      {
+        "question": "What kind of game is FC25?",
+        "answer": "It's a football sports game featuring realistic matches and a variety of football experiences."
+      },
+      {
+        "question": "Does FC25 include competitive modes?",
+        "answer": "Yes, it features competitive modes along with clubs and other football-focused content."
+      },
+      {
+        "question": "Is FC25 available for pre-order?",
+        "answer": "Yes, it's currently listed with pre-order status ahead of its release."
+      }
+    ]
+  }
+]

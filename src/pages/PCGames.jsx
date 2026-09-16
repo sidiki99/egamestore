@@ -18,38 +18,60 @@ export default function PCGames() {
 
 
  const genres = [
-  { name: "All Genres", count: games.length },
-  { name: "PC Games", count: games.filter((game) => game.category === "PC Games").length },
-  { name: "Adventure", count: games.filter((game) => game.category === "Adventure").length },
-  { name: "Play Station", count: games.filter((game) => game.category === "Play Station").length },
+  {
+    name: "All PCGames",
+    count: games.filter(
+      (game) =>
+        game.category === "RPG" ||
+        game.category === "Action" ||
+        game.category === "Tactical Shooter" ||
+        game.category === "FPS" ||
+        game.category === "Sports"
+    ).length,
+  },
+
   { name: "RPG", count: games.filter((game) => game.category === "RPG").length },
   { name: "Action", count: games.filter((game) => game.category === "Action").length },
-  { name: "Shooting", count: games.filter((game) => game.category === "Shooting").length },
-  { name: "MOBA", count: games.filter((game) => game.category === "MOBA").length },
-  { name: "Battle Royale", count: games.filter((game) => game.category === "Battle Royale").length },
+   { name: "Tactical Shooter", count: games.filter((game) => game.category === "Tactical Shooter").length },
+
   { name: "FPS", count: games.filter((game) => game.category === "FPS").length },
   { name: "Sports", count: games.filter((game) => game.category === "Sports").length },
 ];
  const handleGenreChange = (genre) => {
-  if (genre === "All Genres") {
-     setAllGenres(true);
+  if (genre === "All PCGames") {
+    setAllGenres(true);
     setSelectedGenre([]);
     return;
-  }  setAllGenres(false);
+  }
+
+  setAllGenres(false);
+
   setSelectedGenre((prev) =>
     prev.includes(genre)
       ? prev.filter((item) => item !== genre)
       : [...prev, genre]
   );
 };
-const filteredGames = games.filter((game)=>{
- const matchedGenre = selectedGenre.length === 0 || selectedGenre.includes(game.category);
- const matchedPrice = game.price <= price
- return(
-  matchedPrice  && matchedGenre
- )
-}
-)
+
+const pcCategories = [
+  "RPG",
+  "Action",
+  "Tactical Shooter",
+  "FPS",
+  "Sports",
+];
+
+const filteredGames = games.filter((game) => {
+  const isPCGame = pcCategories.includes(game.category);
+
+  const matchedGenre =
+    allGenres || selectedGenre.includes(game.category);
+
+  const matchedPrice = game.price <= price;
+
+  return isPCGame && matchedPrice && matchedGenre;
+});
+
 const{currentItems,currentPage,nextPage,prevPage,totalPages,goToPage}=usePagination(filteredGames,16);
 
 // create arry 
@@ -65,7 +87,7 @@ const { addToCartItem } = useCart();
 
       <div className=" flex items-center justify-between  text-[15px] md:text-[20px]  cursor-pointer">
         <p className=" ">Filters</p>
-        <button className="border border-white rounded-2xl px-3 md:px-4 py-1 md:py-1 whitespace-nowrap text-sm">Clear All</button>
+        <button className="border border-white rounded-2xl px-3 md:px-4 py-1 md:py-1 whitespace-nowrap text-sm"onClick={()=> setAllGenres(false)}>Clear All</button>
       </div>
 
       {/* Filter Card */}
@@ -83,7 +105,12 @@ const { addToCartItem } = useCart();
             {genres.map((genre) => (
               <label key={genre.name} className="flex items-center justify-between cursor-pointer text-[14px] text-[#E5E7EB]">
                 <div className="flex items-center gap-2">
-                <input type="checkbox" checked={genre.name === "All Genres" ? allGenres : selectedGenre.includes(genre.name)} onChange={() => handleGenreChange(genre.name)} className="w-[11px] h-[11px] accent-[#FF6B00] cursor-pointer" />
+                <input type="checkbox" checked={
+                        genre.name === "All PCGames"
+                          ? allGenres
+                          : selectedGenre.includes(genre.name)
+                      } onChange={() => handleGenreChange(genre.name)} 
+                      className="w-[11px] h-[11px] accent-[#FF6B00] cursor-pointer" />
                   <span>{genre.name}</span>
                 </div>
 
@@ -152,13 +179,14 @@ const { addToCartItem } = useCart();
           // className="w-full min-w-0 h-[220px] sm:h-[270px] md:h-[300px] lg:h-[330px] border border-white rounded-xl p-2"
           >
                       {/* Image */}
-          <div
+          <div onClick={() => navigate(`/game/${game.id}`)}
             className="
-              relative h-[60%]  bg-cover  bg-center rounded-xl "
+              relative h-[60%]  bg-cover  bg-center rounded-xl group cursor-pointer "
             style={{
               backgroundImage: `url(${game.image})`,
             }}
           >
+             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300"></div>
             {/* Discount Section */}
             <span
               className=" inline-block bg-heading  px-2    md:px-3  py-1  rounded-xl
@@ -223,7 +251,7 @@ const { addToCartItem } = useCart();
               </button>
 
               <button className="border-2 border-heading bg-heading rounded-md px-1 md:px-3 py-1 md:py-2 whitespace-nowrap flex-1 min-w-0"
-              onClick={() => navigate(`/game/${game.id}`)}>
+              onClick={() =>{ addToCartItem(game),navigate("/checkout")}}>
                 Buy it Now
               </button>
             </div>

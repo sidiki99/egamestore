@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "slug": "heroes-of-the-storm-xalatath",
+    "category": "Heroes of the Storm",
+   "image": "../src/assets/images/new1.jfif",
+    "title": "Blizzard Resurrects Heroes of the Storm with First New Hero in 6 Years: Xal'atath Enters the Nexus, PTR Schedule & Future Roadmap Detailed",
+    "shortDescription": "Blizzard reveals Xal'atath as the first new Heroes of the Storm hero in six years, alongside a full PTR schedule and roadmap for the MOBA's revival.",
+    "description": "After years of minimal support, Blizzard has announced a major revival plan for Heroes of the Storm, headlined by the game's first brand-new hero in six years: Xal'atath, the Voice in the Darkness from World of Warcraft's recent expansions. The announcement, made during a community livestream, confirmed that Xal'atath will bring a unique dagger-throwing assassin kit built around stacking shadow damage and battlefield manipulation, making her one of the most mechanically distinct heroes added to the roster in years. Alongside the hero reveal, Blizzard laid out a full Public Test Realm (PTR) schedule, with an initial testing phase opening next month to gather balance feedback before a live launch. The studio also detailed a broader roadmap covering seasonal events, quality-of-life updates to matchmaking, and a renewed commitment to regular content drops throughout the coming year. For longtime fans who watched the game's support wind down after 2018, this marks the clearest signal yet that Blizzard is reinvesting in the MOBA, with executive producers stating that community demand and steady player retention were key factors behind the decision to bring the development team back up to full strength.",
+    "author": "Admin",
+    "date": "2026-09-14",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 2,
+    "slug": "overwatch-season-15-patch-notes",
+    "category": "Overwatch 2",
+   "image": "../src/assets/images/news2.jpg",
+    "title": "Overwatch 2 Season 15 Patch Notes: New Support Hero, Map Rework, and Competitive Overhaul",
+    "shortDescription": "Season 15 brings a new support hero, a reworked King's Row, and sweeping changes to competitive rank decay and placement rules.",
+    "description": "Blizzard has released the full patch notes for Overwatch 2 Season 15, and it's one of the most substantial updates the game has seen since its free-to-play relaunch. The headline addition is a new support hero designed around area denial and shield redistribution, giving teams a fresh way to contest chokepoints without relying purely on burst healing. King's Row has also been reworked, with the first point widened to reduce spawn-camping and a new flanking route added near the clocktower. On the competitive side, Blizzard is overhauling rank decay so that inactive players lose progress more gradually, and placement matches have been reduced from ten to five to get players into their proper skill bracket faster. The patch also includes over forty hero balance changes, a new battle pass track, and updates to the in-game reporting system aimed at reducing toxic chat behavior. Community reaction has been largely positive, with pro players praising the map changes while some tank mains have raised concerns about survivability shifts.",
+    "author": "Admin",
+    "date": "2026-09-10",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 3,
+    "slug": "starcraft-remastered-2-announcement",
+    "category": "StarCraft",
+    "image": "../src/assets/images/news3.jpg",
+    "title": "StarCraft: Remastered 2 Officially Announced with Full Campaign Overhaul",
+    "shortDescription": "Blizzard confirms a second remaster pass for StarCraft, rebuilding campaign cinematics and adding modernized matchmaking.",
+    "description": "In a surprise announcement at BlizzCon, Blizzard confirmed that StarCraft: Remastered 2 is officially in development, marking the franchise's biggest overhaul since the original 2017 remaster. Unlike the first pass, which focused mainly on visual upscaling, this version will rebuild campaign cinematics from the ground up using in-engine assets, alongside fully re-recorded voice work for the Terran, Zerg, and Protoss campaigns. The multiplayer client is also getting a modernized matchmaking system with region-based server selection and updated anti-cheat protections, addressing years of community complaints about smurfing and queue times. Blizzard says the original balance and unit mechanics will remain untouched to preserve the competitive integrity that keeps the game alive in esports circles nearly three decades after launch. A closed beta for the campaign remaster is expected to open to select community members before a wider rollout next year.",
+    "author": "Admin",
+    "date": "2026-09-05",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 2,
+    "slug": "overwatch-season-15-patch-notes",
+    "category": "Overwatch 2",
+   "image": "../src/assets/images/news2.jpg",
+    "title": "Overwatch 2 Season 15 Patch Notes: New Support Hero, Map Rework, and Competitive Overhaul",
+    "shortDescription": "Season 15 brings a new support hero, a reworked King's Row, and sweeping changes to competitive rank decay and placement rules.",
+    "description": "Blizzard has released the full patch notes for Overwatch 2 Season 15, and it's one of the most substantial updates the game has seen since its free-to-play relaunch. The headline addition is a new support hero designed around area denial and shield redistribution, giving teams a fresh way to contest chokepoints without relying purely on burst healing. King's Row has also been reworked, with the first point widened to reduce spawn-camping and a new flanking route added near the clocktower. On the competitive side, Blizzard is overhauling rank decay so that inactive players lose progress more gradually, and placement matches have been reduced from ten to five to get players into their proper skill bracket faster. The patch also includes over forty hero balance changes, a new battle pass track, and updates to the in-game reporting system aimed at reducing toxic chat behavior. Community reaction has been largely positive, with pro players praising the map changes while some tank mains have raised concerns about survivability shifts.",
+    "author": "Admin",
+    "date": "2026-09-10",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 3,
+    "slug": "starcraft-remastered-2-announcement",
+    "category": "StarCraft",
+    "image": "../src/assets/images/news3.jpg",
+    "title": "StarCraft: Remastered 2 Officially Announced with Full Campaign Overhaul",
+    "shortDescription": "Blizzard confirms a second remaster pass for StarCraft, rebuilding campaign cinematics and adding modernized matchmaking.",
+    "description": "In a surprise announcement at BlizzCon, Blizzard confirmed that StarCraft: Remastered 2 is officially in development, marking the franchise's biggest overhaul since the original 2017 remaster. Unlike the first pass, which focused mainly on visual upscaling, this version will rebuild campaign cinematics from the ground up using in-engine assets, alongside fully re-recorded voice work for the Terran, Zerg, and Protoss campaigns. The multiplayer client is also getting a modernized matchmaking system with region-based server selection and updated anti-cheat protections, addressing years of community complaints about smurfing and queue times. Blizzard says the original balance and unit mechanics will remain untouched to preserve the competitive integrity that keeps the game alive in esports circles nearly three decades after launch. A closed beta for the campaign remaster is expected to open to select community members before a wider rollout next year.",
+    "author": "Admin",
+    "date": "2026-09-05",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 3,
+    "slug": "starcraft-remastered-2-announcement",
+    "category": "StarCraft",
+    "image": "../src/assets/images/news3.jpg",
+    "title": "StarCraft: Remastered 2 Officially Announced with Full Campaign Overhaul",
+    "shortDescription": "Blizzard confirms a second remaster pass for StarCraft, rebuilding campaign cinematics and adding modernized matchmaking.",
+    "description": "In a surprise announcement at BlizzCon, Blizzard confirmed that StarCraft: Remastered 2 is officially in development, marking the franchise's biggest overhaul since the original 2017 remaster. Unlike the first pass, which focused mainly on visual upscaling, this version will rebuild campaign cinematics from the ground up using in-engine assets, alongside fully re-recorded voice work for the Terran, Zerg, and Protoss campaigns. The multiplayer client is also getting a modernized matchmaking system with region-based server selection and updated anti-cheat protections, addressing years of community complaints about smurfing and queue times. Blizzard says the original balance and unit mechanics will remain untouched to preserve the competitive integrity that keeps the game alive in esports circles nearly three decades after launch. A closed beta for the campaign remaster is expected to open to select community members before a wider rollout next year.",
+    "author": "Admin",
+    "date": "2026-09-05",
+    "readTime": "4 min read"
+  }
+]

@@ -2,14 +2,16 @@ import { useEffect, useRef, useState } from "react"
 import { NavLink    ,Link, useNavigate,  } from "react-router-dom";
 import games from "../data/games.json"
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo.avif";
 
 import menuIcon from "../assets/images/menu icon.png";
 
 import Swal from "sweetalert2";
-import { FaAngleDown, FaLockOpen, FaSearch, FaShoppingCart, FaTimes, FaUser } from "react-icons/fa";
-import {  FaLocationDot, FaNoteSticky } from "react-icons/fa6";
+import { FaAngleDown, FaLockOpen, FaSearch, FaShoppingCart, FaTimes, FaUser, FaWallet } from "react-icons/fa";
+import {   FaLocationDot, FaNoteSticky } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+
+;
 
 
 
@@ -24,6 +26,7 @@ function Navbar() {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const [profilePic,setProfilePic]=useState();
 
   const cart = useSelector((store) => store.cartStore.cart);
   const cartTotal = cart.reduce((total, item) => total + item.qty, 0);
@@ -37,17 +40,12 @@ useEffect(() => {
 
     try {
       // Get games from localStorage
-      const storedGames = JSON.parse(
-        localStorage.getItem("games") || "[]"
-      );
-
+      const storedGames = JSON.parse( localStorage.getItem("games") || "[]" );
   
-      const jsonGames = games
-
-      // Combine both
+      const jsonGames = games   
       const allGames = [...storedGames, ...jsonGames];
 
-      // Remove duplicate IDs
+    
       const uniqueGames = Array.from(
         new Map(
           allGames.map((game) => [game.id, game])
@@ -104,12 +102,46 @@ useEffect(() => {
     document.removeEventListener("mousedown", handleClickOutside);
   };
 }, []);
+
+// for updated profile pic
+// useEffect(()=>{
+//   const profiles = JSON.parse( localStorage.getItem("Profile") || "[]" );
+// const selectedProfile=profiles?.find((item)=>item.email === currentUser?.email)
+
+
+// if (selectedProfile) {
+//     setProfilePic(selectedProfile.profileImg);
+//   }
+// },[profilePic])
+
+useEffect(() => {
+  const loadProfile = () => {
+    const profiles = JSON.parse(localStorage.getItem("Profile") || "[]");
+
+    const selectedProfile = profiles.find(
+      (item) => item.email === currentUser?.email
+    );
+
+    if (selectedProfile) {
+      setProfilePic(selectedProfile.profileImg);
+    }
+  };
+
+  loadProfile();
+
+  window.addEventListener("profileUpdated", loadProfile);
+
+  return () => {
+    window.removeEventListener("profileUpdated", loadProfile);
+  };
+}, [currentUser?.email]);
   
 
  const publicNavItems = [
   { name: "Home", path: "/" },
   { name: "PC Games", path: "/pc-games" },
   { name: "Play Station", path: "/play-station" },
+  { name: "Deals", path: "/deals" },
   { name: "Blog", path: "/blog" },
 ];
 
@@ -117,7 +149,7 @@ const userNavItems = [
   { name: "Home", path: "/" },
   { name: "PC Games", path: "/pc-games" },
   { name: "Play Station", path: "/play-station" },
-
+  { name: "Deals", path: "/deals" },
   { name: "Blog", path: "/blog" },
 ];
 
@@ -130,13 +162,13 @@ const adminNavItems = [
 let navItems;
 
 if (!currentUser) {
-  // No login
+ 
   navItems = publicNavItems;
 } else if (currentUser.role === "admin") {
-  // Admin login
+ 
   navItems = adminNavItems;
 } else {
-  // Normal user login
+
   navItems = userNavItems;
 }
  
@@ -184,7 +216,7 @@ console.log(country || "Loading...")
           <img
             src={logo}
             alt="Gaming Store"
-            className="h-10 lg:h-12 w-auto"
+            className="h-10 lg:h-12 w-auto "
           />
         </Link>
       </div>
@@ -353,9 +385,9 @@ console.log(country || "Loading...")
           <button
             type="button"
             onClick={() => setShowSettings(!showSettings)}
-            className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-300 hover:text-orange-500 hover:bg-[#262930] transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-300 hover:text-orange-500 hover:bg-[#262930] transition-all cursor-pointer"
           >
-            <img src="../src/assets/images/game1.png" className="w-10 h-10 object-cover border-3 border-white rounded-full" />
+            <img src={profilePic || "../src/assets/images/customer2 (2).jpg"} className="w-10 h-10 object-cover border-3 border-white rounded-full" />
           </button>
 
           {/* Dropdown */}
@@ -365,25 +397,26 @@ console.log(country || "Loading...")
                className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
                 <FaUser  className="text-xs" /> Profile
               </Link>
-               <Link to={"/orders"}
+
+              {currentUser.role==="user" &&(
+                 <Link to={"/orders"}
                className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
                 <FaNoteSticky  className="text-xs" /> Orders
               </Link>
+              )}
+
+               <Link to={"/wallet"}
+               className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
+              <FaWallet  className="text-xs" /> Wallet
+              </Link>
+
                <Link onClick={handleLogout}
                className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
                 <FaLockOpen  className="text-xs" /> Logout
               </Link>
               
 
-              <button
-                type="button"
-                onClick={() => {setShowSettings(false);
-                  navigate("/change-password");
-                }}
-                className="w-full text-left px-4 py-3 rounded-lg text-sm  hover:text-heading transition-colors font-semibold"
-              >
-                Change 
-              </button>
+              
 
               
             </div>

@@ -47,13 +47,11 @@ export default function ForgotPassword() {
 
 
     setCurrentUser(user);
-
     setStatus("loading");
 
     setTimeout(() => {
       setStatus("idle");
 
-      // Move to OTP step
       setStep(2);
       alert(" Your  OTP Is:", user.otp)
       toast.success();

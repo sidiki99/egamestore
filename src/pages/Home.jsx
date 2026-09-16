@@ -23,8 +23,8 @@ const {
 
 // Tournaments slider
 const {
-  next: tournamentNext,
-  prev: tournamentPrev,
+  // next: tournamentNext,
+  // prev: tournamentPrev,
   sliderRef: tournamentSliderRef,
 } = useSlider(300);
  //  Best games slider
@@ -79,7 +79,7 @@ const upcomingGames = games.filter((game) =>
   <main className="bg-[url('../src/assets/images/mb-hero-bg.png')] md:bg-[url('../src/assets/images/hero-bg.png')] bg-cover bg-center bg-no-repeat mt-10  md:min-h-[450px]   min-h-[300px]       flex md:pt-7 md:pb-30 pt-5 px-5 ">
     <div className="max-w-7xl mx-auto w-full flex items-start  md:items-center justify-between">
       <div className="w-full  min-[375px]:items-center min-[375px]:text-center sm:text-center flex flex-col md:items-start md:w-1/2">
-        <h1 className="font-bold text-3xl   sm:text-4xl        md:text-4xl                text-heading">
+        <h1 className="font-bold text-3xl   sm:text-4xl        md:text-[44px]                text-heading">
           Your Next Game is
         </h1>
         <h1 className="font-bold text-3xl   sm:text-4xl md:text-4xl  text-text">
@@ -89,14 +89,14 @@ const upcomingGames = games.filter((game) =>
           Get instant CD keys for less – play in seconds.
         </p>
         <div className="mt-8  flex flex-wrap  gap-4">
-          <a
-            className="px-3 py-2  md:px-7  rounded-xl bg-heading  border-2 border-heading"
-            href="#">
+          <a onClick={()=>navigate("/deals")}
+            className="px-3 py-2  md:px-7  rounded-xl bg-heading  border-2 cursor-pointer border-heading">
+           
             Browse Deals
           </a>
-          <a
-            className="px-3 py-2  md:px-7 rounded-xl border-2   border-heading"
-            href="#">
+          <a  onClick={()=>navigate("/all-games")}
+            className="px-3 py-2  md:px-7 rounded-xl border-2   border-heading cursor-pointer">
+           
             View Games
           </a>
         </div>
@@ -147,7 +147,7 @@ const upcomingGames = games.filter((game) =>
   
 {/* Category Geos There */}
 
-<section className="hidden md:block mx-2 md:mx-10 lg:mx-15 xl:mx-20 mt-20">
+<section className="hidden md:block mx-2 md:mx-10 lg:mx-35 mt-20">
   <div className="grid grid-cols-12 gap-3">
     <div className="col-span-6 h-40 lg:h-52 xl:h-64 overflow-hidden rounded-2xl">
       <img
@@ -232,9 +232,10 @@ const upcomingGames = games.filter((game) =>
 
  {/* trending games section goes there */}
  <section className="h-auto md:mt-20 mt-0 px-2 lg:px-25">
-  <div className="flex items-center gap-12 px-2 md:px-15 text-[12px]  md:text-[20px]">
+  <div className="flex items-center justify-between gap-12 px-2 md:px-15 text-[12px]  md:text-[20px]">
     <p  className="font-semibold cursor-pointer ">Trending Games</p>
-    <p className="text-heading cursor-pointer">View All <i className="fa fa-angle-right"></i>
+    <p className="text-heading cursor-pointer"
+    onClick={()=>navigate("/trending-games")}>View All <i className="fa fa-angle-right"></i>
     </p>
   </div>
 
@@ -382,22 +383,33 @@ const upcomingGames = games.filter((game) =>
 
  {/* Tournament section goes here */}
  <div>
-  <section className=" px-2 lg:px-30  relative w-auto ">
+  <section className="relative  px-2 lg:px-30   w-auto ">
    
-    <button className="prev hidden lg:block absolute left-0 top-2/7 -translate-y-1/2  ml-25        text-[#A1A1AA] text-3xl transition duration-300 hover:bg-heading cursor-pointer bg-black/30 p-2 px-3"
+    {/* <button className="prev hidden lg:block absolute left-0 top-2/7 -translate-y-1/2  ml-25        text-[#A1A1AA] text-3xl transition duration-300 hover:bg-heading cursor-pointer bg-black/30 p-2 px-3"
     onClick={tournamentPrev}>
       <i className="fa fa-angle-left" />
-    </button>
+    </button> */}
 
-    <div className="h-auto  bg-[linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.5)),url('../src/assets/images/tournament-bg.jpg')] bg-cover bg-center bg-no-repeat md:mt-20 mt-4 bg-header py-6  md:mx-10 ">
-
-      <p className=" font-bold text-lg md:text-4xl mt-5 md:mt-15 text-heading text-center ">
+  <div
+    className="relative h-auto bg-cover bg-center bg-no-repeat md:mt-20 mt-4 py-6 md:mx-10"
+    style={{
+      backgroundImage: "url('/src/assets/images/tournament-bg.jpg')"
+    }}
+  >
+    <div
+        className="absolute inset-0"
+        style={{
+          background: "radial-gradient(circle at 50% 65%, rgba(83,53,43,0.65) 0%, rgba(42,44,51,0.92) 50%, #2A2C33 100%)"
+        }}
+      ></div>
+      
+      <p className=" font-bold text-lg md:text-4xl mt-5 md:mt-15 text-heading text-center relative z-10 ">
         Join <span className="text-white">The Big Tournaments</span>
       </p>
 
       {/* scrollbar */}
 
-      <div ref={tournamentSliderRef} className=" flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-smooth  mt-5 scrollbar-hide">
+      <div ref={tournamentSliderRef} className=" relative z-10 flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-smooth  mt-5 scrollbar-hide">
        
           {/* Each game */}
           {
@@ -435,35 +447,10 @@ const upcomingGames = games.filter((game) =>
         }
       </div>
 
-      <button className="next hidden lg:block absolute right-0 top-2/7 -translate-y-1/2 mr-25            text-[#A1A1AA] text-3xl transition duration-300 hover:bg-heading cursor-pointer bg-black/30 p-2 px-3"
-      onClick={tournamentNext}>
-        <i className="fa fa-angle-right cursor-pointer" />
-      </button>
-      {/* // LOwer section */}
+      
+        <BattleBanner  />
+     
 
-      <div className="pagination flex justify-center gap-3 mt-8" />
-      <div className=" hidden lg:block overflow-y-auto">
-        <div className=" min-w-225 mx-30 my-20 shrink-0">
-          <img className="w-full relative " src="../src/assets/images/frame.png" />
-          <img className="h-90 -mt-93 -ml-80" src="../src/assets/images/man1.png" />
-          <div className="-mt-68 ml-100 absolute center-0 w-[200px]  grid place-content-center justify-center flex-nowrap">
-            <h1 className="text-2xl font-bold">
-              Ready For <span className="text-heading">Battle</span>?
-            </h1>
-            <p className="text-center">
-              Dive into thrilling esports tournaments, global gaming events, and
-              epic community challenges. Victory awaits.
-            </p>
-            <button className="px-2 py-1 bg-heading rounded w-25 ml-10 mt-2">
-              Join Now
-            </button>
-          </div>
-          <img
-            className="h-98 -mt-95.5  mr-65 -scale-x-100 absolute right-0"
-            src="../src/assets/images/man2.png"
-          />
-        </div>
-      </div>
       <div className=" w-full lg:hidden items-center">
         <img className="w-auto" src="../src/assets/images/mb-war.png" />
       </div>
@@ -474,9 +461,11 @@ const upcomingGames = games.filter((game) =>
 
 {/* best games section goes there */}
  <section className="h-auto md:mt-20 mt-0 px-2 lg:px-25">
-  <div className="flex items-center gap-12 px-2 md:px-15 text-[12px]  md:text-[20px]">
+  <div className="flex items-center justify-between gap-12 px-2 md:px-15 text-[12px]  md:text-[20px]">
     <p  className="font-semibold cursor-pointer ">Best Games</p>
-    <p className="text-heading cursor-pointer">View All <i className="fa fa-angle-right"></i>
+    <p className="text-heading cursor-pointer"
+     onClick={()=>navigate("/best-games")}
+     >View All <i className="fa fa-angle-right"></i>
     </p>
   </div>
 
@@ -509,12 +498,15 @@ const upcomingGames = games.filter((game) =>
           >
                       {/* Image */}
           <div
+          onClick={() => navigate(`/game/${game.id}`)}
             className="
-              relative h-[60%]  bg-cover  bg-center rounded-xl "
+              relative  group  group-hover:bg-black/30 h-[60%]  bg-cover  bg-center rounded-xl "
             style={{
               backgroundImage: `url(${game.image})`,
             }}
           >
+           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300"></div>
+
             {/* Discount Section */}
             <span
               className=" inline-block bg-heading  px-2    md:px-3  py-1  rounded-xl
@@ -624,7 +616,7 @@ const upcomingGames = games.filter((game) =>
  {/* upcoming games section goes here */}
 
  <div className="h-auto mt-20 px-2 lg:px-25">
-  <div className="flex items-center gap-12 md:px-15 px-3 text-[12px] md:text-[20px]">
+  <div className="flex items-center justify-between gap-12 md:px-15 px-3 text-[12px] md:text-[20px]">
     <p className="font-semibold cursor-pointer">UpComing Games</p>
     <p className="text-heading cursor-pointer">
       View All <i className="fa fa-angle-right" />
@@ -708,7 +700,7 @@ const upcomingGames = games.filter((game) =>
         Play Your Best Game
       </h1>
       <h1 className="font-bold text-[25px]  md:text-[44px] md:font-bold lg:text-[44px] text-text">
-        {" "}
+       
         & Collect Epic Deal
       </h1>
       <p className="text-sm lg:text-xl mt-2">
@@ -717,16 +709,16 @@ const upcomingGames = games.filter((game) =>
         <br />
         New deals added every day — don’t miss out!
       </p>
-      <div className="md:mt-10 mt-4 flex gap-4 text-[12px] md:text-[20px]">
-        <a
-          className=" p-2 lg:px-6 lg:py-3   border-heading border-3 rounded-2xl bg-heading"
-          href="#">
-          {" "}
+      <div className="md:mt-10 mt-4 flex gap-4 ">
+        <a onClick={()=>navigate("/deals")}
+          className="  lg:px-4 lg:py-2   border-heading border-3 rounded-2xl bg-heading"
+        >
+        
           Browse Deals
         </a>
-        <a
-          className="lg:px-6 lg:py-3 p-2 rounded-2xl border-3 border-heading "
-          href="#">
+        <a onClick={()=>navigate("/pc-games")}
+          className="lg:px-4 lg:py-2  rounded-2xl border-3 border-heading "
+        >
           Views Games
         </a>
       </div>
@@ -741,7 +733,10 @@ const upcomingGames = games.filter((game) =>
 
 {/* Customer Review section goes here */}
 <section className="mt-10 px-5 lg:px-40 slider-wrapper ">
-  <p className="font-semibold text-xl">Customer Reviews</p>
+ <div className="flex justify-between items-center">
+   <p className="font-semibold text-xl">Customer Reviews</p>
+   <p className="text-heading cursor-pointer">View All <i className="fa fa-angle-right"></i></p>
+ </div>
   <div className="mt-10 flex justify-between slider  overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide md:p-12">
     <div className=" relative w-70 shrink-0 h-80">
       <div className="absolute inset-0   mt-3  -ml-3                 ">
@@ -794,18 +789,18 @@ const upcomingGames = games.filter((game) =>
       </div>
     </div>
   </div>
-  {/* <p className="justify-center justify-self-center">
-    <img className="mt-5" src="../src/assets/images/dot.png" />
-  </p> */}
+ 
 </section>
+{/* <CustomerReviews /> */}
 {/* Customer review section ends here */}
 
 {/* Blog Post section goes here */}
 <div className=" items-center justify-around flex-nowrap ml-2 lg:mx-40 mt-20 ">
-  <div className="flex gap-12 items-center px-4 text-xl">
+  <div className="flex justify-between gap-12 items-center px-4 text-xl">
     <p className="font-semibold "> Post Blog </p>
-    <p className=" text-heading">
-      View All <i className="fa fa-angle-right" />{" "}
+    <p className=" text-heading cursor-pointer"
+    onClick={()=>navigate("/blog")}>
+      View All <i className="fa fa-angle-right " />
     </p>
   </div>
   <div className="flex gap-3 w-full  justify-between mt-5 overflow-y-auto  md:overflow-y-hidden  scrollbar-hide mx-2">
@@ -854,3 +849,75 @@ const upcomingGames = games.filter((game) =>
 }
 
 export default Home
+
+
+
+
+
+import frame from "../assets/images/frame.png";
+import man1 from "../assets/images/man1.png";
+import man2 from "../assets/images/man2.png";
+
+const BattleBanner = () => {
+  return (
+    <section className=" relative z-10 w-full bg-transparent px-3 py-5 sm:px-6 lg:px-20   ">
+      <div className="relative mx-auto md:mt-20 w-full max-w-[1200px] aspect-[627/221] overflow-visible">
+       {/* <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5))]"></div> */}
+
+        {/* FRAME */}
+        <img
+          src={frame}
+          alt=""
+          className="absolute inset-0 z-5 sm:h-70 md:h-43 lg:h-43 xl:h-70 w-full object-fill pointer-events-none select-none"
+        />
+
+        {/* LEFT MAN */}
+        <img
+          src={man1}
+          alt="Battle character"
+         
+          className="absolute z-[10] left-[-29%] md:left-[-25%] lg:left-[-29%] bottom-[11%] md:bottom-[38%] [@media(min-width:768px)_and_(max-width:900px)]:bottom-[25%] lg:bottom-[26%] sm:h-[94%] md:h-[74%] lg:h-[94%] xl:h-[94%] w-auto max-w-[63%]  object-contain object-bottom pointer-events-none select-none"
+        />
+
+        {/* RIGHT MAN */}
+        <img
+          src={man2}
+          alt="Battle character"
+          className="absolute z-[10] right-[-1%] 
+          [@media(min-width:768px)_and_(max-width:900px)]:bottom-[23%]
+          bottom-[8%] md:bottom-[36%] lg:bottom-[23%] sm:h-[94%] md:h-[74%] lg:h-[104%] w-auto max-w-[63%] scale-x-[-1] object-contain object-bottom pointer-events-none select-none"
+        />
+
+        {/* CENTER CONTENT */}
+        <div className="absolute inset-0 z-[2] flex items-center justify-center px-[29%] text-center lg:bottom-[15%] md:bottom-[25%] lg:bottom-[15%]">
+          <div className="w-full max-w-[390px]">
+
+           {/* TITLE */}
+<h1 className="font-extrabold leading-none text-white text-[clamp(16px,3vw,36px)] max-sm:text-[12px]">
+  Ready for{" "}
+  <span className="text-[#ff681b]">Battle</span>
+  <span className="text-white">?</span>
+</h1>
+
+{/* DESCRIPTION */}
+<p className="mx-auto mt-[1.2%] max-w-[450px] text-[clamp(6px,0.9vw,14px)] font-medium leading-[1.45] text-white/80 max-sm:text-[5px]">
+  Dive into thrilling esports tournaments, global gaming events,
+  and epic community challenges. 
+</p>
+
+{/* BUTTON */}
+<button
+  type="button"
+  className=" mt-[3%] md:mt-[2%] rounded-md bg-[#ff681b] px-[clamp(12px,2vw,28px)] py-[clamp(5px,0.7vw,11px)] text-[clamp(6px,0.7vw,12px)] font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-500/20 transition-all duration-200 hover:bg-[#ff7b36] hover:scale-105 active:scale-95 max-sm:text-[5px] max-sm:px-2 max-sm:py-1"
+>
+  Join Now
+</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+

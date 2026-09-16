@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import toast from "react-hot-toast";
 import { FaUser } from "react-icons/fa"
+import { useNavigate } from "react-router-dom";
 
 
 function Profile() {
  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+ const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -94,6 +96,10 @@ function Profile() {
       toast.error("Please login first");
       return;
     }
+    if(formData.phone.length !== 11){
+      toast.error("Phone no must be 11 characters")
+      return
+    }
 
     const profiles = JSON.parse(localStorage.getItem("Profile")) || [];
 
@@ -124,6 +130,7 @@ function Profile() {
    
     localStorage.setItem("Profile", JSON.stringify(profiles));  
     setProfile(profileData);
+     window.dispatchEvent(new Event("profileUpdated"));
   };
  
   return (
@@ -233,7 +240,7 @@ function Profile() {
         <div className="flex flex-col gap-2">
 
           {/* Password */}
-          {/* <div>
+          <div>
             <label className="block text-[11px] text-gray-400 mb-1">
               Password
             </label>
@@ -243,12 +250,14 @@ function Profile() {
                 type="password" value="AlexPassword123"               
                 className="w-full h-8 px-2 pr-14 bg-[#191d22] rounded-md outline-none text-[11px] text-gray-300"
               />
-              <button className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-orange-500 hover:text-orange-400 underline">
+              <button className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-orange-500 hover:text-orange-400 underline cursor-pointer"
+              onClick={()=>navigate("/change-password")}>
+              
                 change
               </button>
             </div>
-          </div> */}
-           <button type="submit" className="bg-heading w-full px-2 py-3 rounded-md mt-5">Update Profile</button> 
+          </div>
+           <button type="submit" className="bg-heading w-full px-2 py-3 rounded-md mt-5 mb-5">Update Profile</button> 
 
         
 
