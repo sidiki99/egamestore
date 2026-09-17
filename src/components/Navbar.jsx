@@ -7,7 +7,7 @@ import logo from "../assets/images/logo.avif";
 import menuIcon from "../assets/images/menu icon.png";
 
 import Swal from "sweetalert2";
-import { FaAngleDown, FaLockOpen, FaSearch, FaShoppingCart, FaTimes, FaUser, FaWallet } from "react-icons/fa";
+import { FaAngleDown, FaCross, FaLockOpen, FaSearch, FaShoppingCart, FaTimes, FaUser, FaWallet } from "react-icons/fa";
 import {   FaLocationDot, FaNoteSticky } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 
@@ -21,6 +21,7 @@ function Navbar() {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const navigate = useNavigate();
   const [showSettings, setShowSettings] = useState(false);
+  const desktopSettingsRef = useRef(null);
   const settingsRef = useRef(null);
 
   const [search, setSearch] = useState("");
@@ -89,6 +90,8 @@ const handleGameClick = (game) => {
 useEffect(() => {
   const handleClickOutside = (event) => {
     if (
+      desktopSettingsRef.current &&
+      !desktopSettingsRef.current.contains(event.target) &&
       settingsRef.current &&
       !settingsRef.current.contains(event.target)
     ) {
@@ -103,16 +106,7 @@ useEffect(() => {
   };
 }, []);
 
-// for updated profile pic
-// useEffect(()=>{
-//   const profiles = JSON.parse( localStorage.getItem("Profile") || "[]" );
-// const selectedProfile=profiles?.find((item)=>item.email === currentUser?.email)
 
-
-// if (selectedProfile) {
-//     setProfilePic(selectedProfile.profileImg);
-//   }
-// },[profilePic])
 
 useEffect(() => {
   const loadProfile = () => {
@@ -227,7 +221,7 @@ console.log(country || "Loading...")
           {navItems.map((item) => (
             <li key={item.name}>
               <NavLink to={item.path}
-                // className="whitespace-nowrap py-2 border-b-2 border-transparent hover:text-heading hover:border-heading transition-all duration-300"
+                
 
                 className={({ isActive }) => `whitespace-nowrap py-2 border-b-2 transition-all duration-300 ${isActive ? "text-heading border-heading" : "border-transparent hover:text-heading hover:border-heading"}`}
               >
@@ -248,8 +242,8 @@ console.log(country || "Loading...")
           />
         </div> */}
 
-       {currentUser?.role === "user" &&
-        <div className="relative w-full max-w-xl">
+       {currentUser?.role !== "admin" &&
+        <div className="hidden md:block relative w-full max-w-xl">
 
                 <FaSearch
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-heading"
@@ -376,10 +370,10 @@ console.log(country || "Loading...")
         </div>
 
         {currentUser?
-      <div className=" flex gap-4 items-center">
+      <div className="hidden md:flex gap-4 items-center">
          
           {/*  Option */}
-          <div className="relative" ref={settingsRef}>
+          <div className="relative"  ref={desktopSettingsRef}>
 
           {/* Profile Button */}
           <button
@@ -414,15 +408,10 @@ console.log(country || "Loading...")
                className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
                 <FaLockOpen  className="text-xs" /> Logout
               </Link>
-              
-
-              
-
-              
             </div>
           )}
 
-        </div>
+          </div>
        
          </div>
         :
@@ -431,60 +420,148 @@ console.log(country || "Loading...")
           className="bg-heading hover:bg-orange-600 px-4 py-3 rounded-lg transition"
         >
           Login
-        </Link>}
+        </Link>
+        }
+
       </div>
 
       {/* Mobile Button */}
+
+       {currentUser?.role === "user" && (
+  <div className="relative w-30 md:hidden mr-2">
+    <FaSearch
+      className="absolute left-4 top-1/2 -translate-y-1/2 text-heading"
+      size={15}
+    />
+
+    <input
+      type="text"
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      onFocus={() => {
+        if (search.trim()) {
+          setShowResults(true);
+        }
+      }}
+      placeholder=""
+      className="w-full rounded-xl border border-[#303747] py-1 pl-11 pr-8 text-sm text-white outline-none placeholder:text-gray-500 focus:border-heading"
+    />
+
+    {search && (
       <button
-        onClick={() => setOpenMenu(!openMenu)}
-        className="md:hidden"
+        type="button"
+        onClick={() => {
+          setSearch("");
+          setResults([]);
+          setShowResults(false);
+        }}
+        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"
       >
-        <img src={menuIcon}  alt="Menu" className="w-8"
-        />
+        <FaTimes size={14} />
       </button>
+    )}
+
+    {showResults && search.trim() && (
+      <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 overflow-hidden rounded-xl border border-[#303747] bg-[#151A27] shadow-2xl">
+        {/* results */}
+      </div>
+    )}
+  </div>
+)}
+
+<button
+  onClick={() => setOpenMenu(!openMenu)}
+  className="md:hidden"
+>
+  <img src={menuIcon} alt="Menu" className="w-8 mr-5" />
+</button>
+
+      
+
+       {currentUser?
+      <div className=" flex gap-4 items-center md:hidden">
+         
+          {/*  Option */}
+          <div className="relative" ref={settingsRef}>
+
+          {/* Profile Button */}
+          <button
+            type="button"
+            onClick={() => setShowSettings(!showSettings)}
+            className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-300 hover:text-orange-500 hover:bg-[#262930] transition-all cursor-pointer"
+          >
+            <img src={profilePic || "../src/assets/images/customer2 (2).jpg"} className="w-10 h-10 object-cover border-3 border-white rounded-full" />
+          </button>
+
+          {/* Dropdown */}
+          {showSettings && (
+            <div className="absolute -right-0 top-full mt-2 w- bg-[#262930] border border-heading rounded-xl shadow-xl p-1 z-50 text-white text-xs">
+               <Link to={"/profile"}
+               className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
+                <FaUser  className="text-xs" /> Profile
+              </Link>
+
+              {currentUser.role==="user" &&(
+                 <Link to={"/orders"}
+               className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
+                <FaNoteSticky  className="text-xs" /> Orders
+              </Link>
+              )}
+
+               <Link to={"/wallet"}
+               className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
+              <FaWallet  className="text-xs" /> Wallet
+              </Link>
+
+               <Link onClick={handleLogout}
+               className=" hover:text-heading   p-2 rounded-lg transition flex gap-1 items-center font-semibold">
+                <FaLockOpen  className="text-xs" /> Logout
+              </Link>
+              
+            </div>
+          )}
+
+          </div>
+       
+         </div>
+        :
+     
+        <Link to="/login"
+          className="md:hidden bg-heading hover:bg-orange-600 px-4 py-3 rounded-lg transition"
+        >
+          Login
+        </Link>}
 
     </div>
 
     {/* Mobile Menu */}
     {openMenu && (
-      <div className="md:hidden pb-5">
-        <ul className="flex flex-col gap-4">
+      <div className="md:hidden pb-5  w-full justify-between flex  bg-black/20   p-5 rounded-xl mt-1">
+        <ul className="flex flex-col gap-2">
 
           {navItems.map((item) => (
             <li key={item.name}>
               <Link   to={item.path}  onClick={() => setOpenMenu(false)}
-                className="block py-2 hover:text-heading transition"
+                className="block py-2 hover:bg-heading transition"
               >
                 {item.name}
               </Link>
             </li>
           ))}
-
-         {
-          currentUser? <li>
-            <Link   onClick={handleLogout}
-              className="inline-block bg-heading px-6 py-3 rounded-lg"
-              
-              
-            >
-              Logout
-            </Link>
-          </li>
-          :
-          <li>
-            <Link  to="/login"  onClick={() => setOpenMenu(false)}
-              className="inline-block bg-heading px-6 py-3 rounded-lg"
-              
-            >
-             Login
-            </Link>
-          </li>
-         }
+          
         </ul>
+
+        <p className="text-red-600 hover:text-red-500 transition"
+        onClick={() => setOpenMenu(!openMenu)}
+        ><FaTimes size={14} /></p>
       </div>
     )}
 
+    
+
   </div>
+
+  
 </nav>
   )
 }

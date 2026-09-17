@@ -26,11 +26,7 @@ const userCart = allCart.filter(
     (item) => item.id === cartObj.id &&
          item.userEmail === currentUser.email
   );
-  //   if (existingProduct) {
-  //   existingProduct.qty += 1;
-  // } else {
-  //   state.cart.push(cartObj);
-  // }
+ 
   if (existingProduct) {
     existingProduct.qty += selectedQty || 1;
   } else {

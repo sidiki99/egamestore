@@ -21,7 +21,7 @@ export default function Wallet() {
 
        </div> 
        {/* Ponits info  */}
-       <div className="flex w-full mt-10 gap-10">
+       <div className=" md:flex w-full mt-10 gap-10">
          {/* left card */}
           <div className=" w-full md:w-1/2 flex-col flex rounded-2xl border border-gray-50/20 bg-[#17191D] p-5  ">
             <h1 className="text-xl font-semibold  ">How to Earn Points</h1>
@@ -60,8 +60,8 @@ export default function Wallet() {
           {/* right Card */}
            <div className=" w-full md:w-1/2 flex-col flex rounded-2xl border border-gray-50/20 bg-[#17191D] p-5  ">
             <h1 className="text-xl font-semibold  ">How to Use Points</h1>
-            <div className="bg-background p-3 flex gap-3 rounded-xl mt-4">
-              <div className=" px-3 py-3 bg-[#EE4645]/20 rounded-xl">
+            <div className="bg-background p-3 flex gap-3 rounded-xl mt-4 items-center">
+              <div className=" px-3 py-3 bg-[#EE4645]/20 rounded-xl w-13 h-13 ">
                <FaPercentage className="text-2xl text-[#EE4645]" />
               </div>
               <div className="flex justify-between w-full">
@@ -73,9 +73,9 @@ export default function Wallet() {
               </div>
             </div>
 
-             <div className="bg-background p-3 flex gap-3 rounded-xl mt-4">
-              <div className=" px-3 py-3 bg-[#3d8287]/20 rounded-xl">
-               <FaShippingFast className="text-2xl text-[#3d8287]" />
+             <div className="bg-background p-3 flex gap-3 rounded-xl mt-4 items-center ">
+              <div className=" px-3 py-3 bg-[#3d8287]/20 rounded-xl  w-13 h-13">
+               <FaShippingFast className="text-2xl text-[#3d8287]  " />
               </div>
               <div className="flex justify-between w-full">
                 <div >
@@ -87,8 +87,8 @@ export default function Wallet() {
             </div>
 
 
-            <div className="bg-background p-3 flex gap-3 rounded-xl mt-4">
-              <div className=" px-3 py-3 bg-[#22c65f]/20 rounded-xl">
+            <div className="bg-background p-3 flex gap-3 rounded-xl mt-4 items-center">
+              <div className=" px-3 py-3 bg-[#22c65f]/20 rounded-xl w-13 h-13 ">
                <FaGift className="text-2xl text-[#22c65f]" />
               </div>
                <div className="flex justify-between w-full">
@@ -158,8 +158,8 @@ const TransactionHistory = () => {
 
             <tbody>
               {transactions.length > 0 ?
-              <div>
-              {transactions.map((transaction, index) => (
+             
+              (transactions.map((transaction, index) => (
                 <tr key={index}>
                     <td className="border-b border-[#26262e] py-4  text-sm whitespace-nowrap text-[#8b8b96] last:border-b-0">
                     {transaction.orderId}
@@ -198,10 +198,16 @@ const TransactionHistory = () => {
                       {transaction.billing?.total}$                 
                      </td>
                 </tr>
-              ))}
-              </div>
+              )))
+             
             :
-            <p className="py-4 text-sm font-medium whitespace-nowrap text-[#e8e8ec]">No transaction yet</p>}
+            (
+                  <tr>
+                    <td colSpan="5" className="py-4 text-sm text-[#e8e8ec]">
+                      No transaction yet
+                    </td>
+                  </tr>
+                )}
             </tbody>
           </table>
         </div>

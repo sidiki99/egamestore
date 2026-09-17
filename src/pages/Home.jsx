@@ -892,26 +892,26 @@ const BattleBanner = () => {
         <div className="absolute inset-0 z-[2] flex items-center justify-center px-[29%] text-center lg:bottom-[15%] md:bottom-[25%] lg:bottom-[15%]">
           <div className="w-full max-w-[390px]">
 
-           {/* TITLE */}
-<h1 className="font-extrabold leading-none text-white text-[clamp(16px,3vw,36px)] max-sm:text-[12px]">
-  Ready for{" "}
-  <span className="text-[#ff681b]">Battle</span>
-  <span className="text-white">?</span>
-</h1>
+                      {/* TITLE */}
+            <h1 className="font-extrabold leading-none text-white text-[clamp(16px,3vw,36px)] max-sm:text-[12px]">
+              Ready for{" "}
+              <span className="text-[#ff681b]">Battle</span>
+              <span className="text-white">?</span>
+            </h1>
 
-{/* DESCRIPTION */}
-<p className="mx-auto mt-[1.2%] max-w-[450px] text-[clamp(6px,0.9vw,14px)] font-medium leading-[1.45] text-white/80 max-sm:text-[5px]">
-  Dive into thrilling esports tournaments, global gaming events,
-  and epic community challenges. 
-</p>
+            {/* DESCRIPTION */}
+            <p className="mx-auto mt-[1.2%] max-w-[450px] text-[clamp(6px,0.9vw,14px)] font-medium leading-[1.45] text-white/80 max-sm:text-[5px]">
+              Dive into thrilling esports tournaments, global gaming events,
+              and epic community challenges. 
+            </p>
 
-{/* BUTTON */}
-<button
-  type="button"
-  className=" mt-[3%] md:mt-[2%] rounded-md bg-[#ff681b] px-[clamp(12px,2vw,28px)] py-[clamp(5px,0.7vw,11px)] text-[clamp(6px,0.7vw,12px)] font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-500/20 transition-all duration-200 hover:bg-[#ff7b36] hover:scale-105 active:scale-95 max-sm:text-[5px] max-sm:px-2 max-sm:py-1"
->
-  Join Now
-</button>
+            {/* BUTTON */}
+            <button
+              type="button"
+              className=" mt-[3%] md:mt-[2%] rounded-md bg-[#ff681b] px-[clamp(12px,2vw,28px)] py-[clamp(5px,0.7vw,11px)] text-[clamp(6px,0.7vw,12px)] font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-500/20 transition-all duration-200 hover:bg-[#ff7b36]  cursor-pointer max-sm:text-[5px] max-sm:px-2 max-sm:py-1"
+            >
+              Join Now
+            </button>
           </div>
         </div>
 

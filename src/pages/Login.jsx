@@ -35,7 +35,6 @@ function Login() {
     return
    }
 
-    console.log(formData)
   
     localStorage.setItem("currentUser",JSON.stringify(currentUser))
     toast.success("Logged In Successfully")
@@ -46,7 +45,11 @@ function Login() {
       );
 
       dispatch(setCart(userCart));
+   if(currentUser.role === "admin"){
+     navigate("/admin")
+   }else{
     navigate("/")
+   }
 
   })
   return (
