@@ -11,12 +11,7 @@ import useCart from "../hooks/useCart";
 
 
  import usePagination from "../hooks/usePagination";
-
-
-
-
-
-
+ 
 export default function PlayStation(){
   return(
     <div className="md:px-20 px-1.5">
@@ -319,7 +314,9 @@ const filteredGames = games.filter((game) => {
      </button>
    ))}
  
-   <button onClick={nextPage} disabled={currentPage === totalPages} className="px-3 py-2 border border-[#A1A1A1] text-[#E5E7EB] rounded-md hover:border-[#FF6B00] hover:text-[#FF6B00] disabled:opacity-40 disabled:cursor-not-allowed transition">Next</button>
+   <button onClick={nextPage}
+    disabled={currentPage === totalPages} 
+    className="px-3 py-2 border border-[#A1A1A1] text-[#E5E7EB] rounded-md hover:border-[#FF6B00] hover:text-[#FF6B00] disabled:opacity-40 disabled:cursor-not-allowed transition">Next</button>
  </div>
    </>
    )

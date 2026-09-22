@@ -745,7 +745,7 @@ const upcomingGames = games.filter((game) =>
       <div className="absolute inset-4                  flex flex-col items-center justify-center p-8 rotate-3 bg-[url('../src/assets/images/Vector9.png')] bg-cover bg-center">
         <img
           className="w-20 h-20 object-cover rounded-full -mt-10 "
-          src="../src/assets/images/customer2 (1).jpg"
+          src="../src/assets/images/customer1.jpg"
         />
         <h2 className="mt-4 text-3xl font-bold text-white">Leo</h2>
         <div className="text-orange-500 text-xl">★★★★☆</div>
@@ -756,12 +756,12 @@ const upcomingGames = games.filter((game) =>
     </div>
     <div className=" relative w-80 shrink-0 h-90">
       <div className="absolute inset-0  mt-3                   ">
-        <img className="object-cover" src="../src/assets/images/Vector2(2).png" />
+        <img className="object-cover" src="../src/assets/images/Vector2-2.png" />
       </div>
-      <div className="absolute inset-3 -ml-10                  flex flex-col items-center justify-center p-8 bg-[url('../src/assets/images/Vector2(1).png')] bg-cover bg-center">
+      <div className="absolute inset-3 -ml-10                  flex flex-col items-center justify-center p-8 bg-[url('../src/assets/images/Vector2-1.png')] bg-cover bg-center">
         <img
           className="w-20 h-20 object-cover rounded-full -mt-10 "
-          src="../src/assets/images/customer2 (2).jpg"
+          src="../src/assets/images/customer2.jpg"
         />
         <h2 className="mt-4 text-3xl font-bold text-white">Hannah Schmitt</h2>
         <div className="text-orange-500 text-xl">★★★★☆</div>
@@ -774,12 +774,12 @@ const upcomingGames = games.filter((game) =>
     </div>
     <div className=" relative w-70 shrink-0 h-80">
       <div className="absolute inset-0   mt-3  -mr-3                 ">
-        <img src="../src/assets/images/Vector3(1).png" />
+        <img src="../src/assets/images/Vector3-1.png" />
       </div>
-      <div className="absolute inset-4                  flex flex-col items-center justify-center p-8 rotate-3 bg-[url('../src/assets/images/Vector3(2).png')] bg-cover bg-center">
+      <div className="absolute inset-4                  flex flex-col items-center justify-center p-8 rotate-3 bg-[url('../src/assets/images/Vector3-2.png')] bg-cover bg-center">
         <img
           className="w-20 h-20 object-cover rounded-full -mt-10 "
-          src="../src/assets/images/customer2 (3).jpg"
+          src="../src/assets/images/customer3.jpg"
         />
         <h2 className="mt-4 text-3xl font-bold text-white">Alex</h2>
         <div className="text-orange-500 text-xl">★★★★☆</div>
