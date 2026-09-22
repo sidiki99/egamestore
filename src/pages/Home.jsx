@@ -231,7 +231,7 @@ const upcomingGames = games.filter((game) =>
 {/* categoies ends there  */}
 
  {/* trending games section goes there */}
- <section className="h-auto md:mt-20 mt-0 px-2 lg:px-25">
+ <section className="h-auto md:mt-20 mt-5 px-2 lg:px-25">
   <div className="flex items-center justify-between gap-12 px-2 md:px-15 text-[12px]  md:text-[20px]">
     <p  className="font-semibold cursor-pointer ">Trending Games</p>
     <p className="text-heading cursor-pointer"
@@ -451,16 +451,16 @@ const upcomingGames = games.filter((game) =>
         <BattleBanner  />
      
 
-      <div className=" w-full lg:hidden items-center">
+      {/* <div className=" w-full lg:hidden items-center">
         <img className="w-auto" src="/images/games/mb-war.png" />
-      </div>
+      </div> */}
     </div>
   </section>
 </div>
 {/* Tournament section ends here */}
 
 {/* best games section goes there */}
- <section className="h-auto md:mt-20 mt-0 px-2 lg:px-25">
+ <section className="h-auto md:mt-20 mt-5 px-2 lg:px-25">
   <div className="flex items-center justify-between gap-12 px-2 md:px-15 text-[12px]  md:text-[20px]">
     <p  className="font-semibold cursor-pointer ">Best Games</p>
     <p className="text-heading cursor-pointer"
@@ -709,15 +709,15 @@ const upcomingGames = games.filter((game) =>
         <br />
         New deals added every day — don’t miss out!
       </p>
-      <div className="md:mt-10 mt-4 flex gap-4 ">
+      <div className="md:mt-10 mt-4 flex gap-4  ">
         <a onClick={()=>navigate("/deals")}
-          className="  lg:px-4 lg:py-2   border-heading border-3 rounded-2xl bg-heading"
+          className=" px-4  lg:px-4 lg:py-2  py-1  border-heading border-3 rounded-2xl bg-heading"
         >
         
           Browse Deals
         </a>
         <a onClick={()=>navigate("/pc-games")}
-          className="lg:px-4 lg:py-2  rounded-2xl border-3 border-heading "
+          className="lg:px-4 lg:py-2  px-4 py-1 rounded-2xl border-3 border-heading "
         >
           Views Games
         </a>

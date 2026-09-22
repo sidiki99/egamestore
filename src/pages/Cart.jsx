@@ -12,7 +12,7 @@ function Cart() {
 );
   
   return (
-    <div className="px-20 mt-10 gap-5">
+    <div className="px-2 md:px-20 mt-10 gap-5">
        <div className=" lg:flex gap-5">
         {/* mobile view */}
         
