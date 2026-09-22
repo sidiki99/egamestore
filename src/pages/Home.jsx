@@ -76,7 +76,7 @@ const upcomingGames = games.filter((game) =>
 
   return (
     <div>
-  <main className="bg-[url('../src/assets/images/mb-hero-bg.png')] md:bg-[url('../src/assets/images/hero-bg.png')] bg-cover bg-center bg-no-repeat mt-10  md:min-h-[450px]   min-h-[300px]       flex md:pt-7 md:pb-30 pt-5 px-5 ">
+  <main className="bg-[url('/images/games/mb-hero-bg.png')] md:bg-[url('/images/games/hero-bg.png')] bg-cover bg-center bg-no-repeat mt-10  md:min-h-[450px]   min-h-[300px]       flex md:pt-7 md:pb-30 pt-5 px-5 ">
     <div className="max-w-7xl mx-auto w-full flex items-start  md:items-center justify-between">
       <div className="w-full  min-[375px]:items-center min-[375px]:text-center sm:text-center flex flex-col md:items-start md:w-1/2">
         <h1 className="font-bold text-3xl   sm:text-4xl        md:text-[44px]                text-heading">
@@ -111,25 +111,25 @@ const upcomingGames = games.filter((game) =>
           <div className="w-24 lg:w-38 xl:w-38">
             <img
               className="w-full rounded object-cover transition-transform duration-300 hover:translate-y-5 hover:scale-111"
-              src="../src/assets/images/heroimg1.png"
+              src="/images/games/heroimg1.png"
             />
           </div>
           <div className="w-24 lg:w-38 xl:w-38 h-28 md:43 lg:h-52 min-[800px]:h-33         min-[860px]:h-35           min-[990px]:h-38">
             <img
               className="w-full h-full rounded object-cover transition-transform duration-300 hover:translate-y-5 hover:scale-111"
-              src="../src/assets/images/heroimg2.jpg"
+              src="/images/games/heroimg2.jpg"
             />
           </div>
           <div className="w-24 lg:w-38 xl:w-38">
             <img
               className="w-full rounded object-cover transition-transform duration-300 hover:translate-y-5 hover:scale-111"
-              src="../src/assets/images/heroimg3.png"
+              src="/images/games/heroimg3.png"
             />
           </div>
           <div className="w-24 lg:w-38 xl:w-38">
             <img
               className="w-full rounded object-cover transition-transform duration-300 hover:translate-y-5 hover:scale-111"
-              src="../src/assets/images/heroimg4.png"
+              src="/images/games/heroimg4.png"
             />
           </div>
         </div>
@@ -151,7 +151,7 @@ const upcomingGames = games.filter((game) =>
   <div className="grid grid-cols-12 gap-3">
     <div className="col-span-6 h-40 lg:h-52 xl:h-64 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/ca1.png"
+        src="/images/games/ca1.png"
         alt="Sports & Racing"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -159,7 +159,7 @@ const upcomingGames = games.filter((game) =>
 
     <div className="col-span-3 h-40 lg:h-52 xl:h-64 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/ca2.png"
+        src="/images/games/ca2.png"
         alt="RPG"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -167,7 +167,7 @@ const upcomingGames = games.filter((game) =>
 
     <div className="col-span-3 h-40 lg:h-52 xl:h-64 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/ca3.png"
+        src="/images/games/ca3.png"
         alt="Adventure"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -175,7 +175,7 @@ const upcomingGames = games.filter((game) =>
 
     <div className="col-span-3 h-40 lg:h-52 xl:h-64 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/ca4.png"
+        src="/images/games/ca4.png"
         alt="Strategy"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -184,7 +184,7 @@ const upcomingGames = games.filter((game) =>
   
     <div className="col-span-3 h-40 lg:h-52 xl:h-64 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/ca5.png"
+        src="/images/games/ca5.png"
         alt="Survival"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -193,7 +193,7 @@ const upcomingGames = games.filter((game) =>
   
     <div className="col-span-6 h-40 lg:h-52 xl:h-64 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/ca6.png"
+        src="/images/games/ca6.png"
         alt="Action"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -210,7 +210,7 @@ const upcomingGames = games.filter((game) =>
 
     <div className="h-56 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/cat1 (1).jpg"
+        src="/images/games/cat1 (1).jpg"
         alt="Category"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -218,7 +218,7 @@ const upcomingGames = games.filter((game) =>
 
     <div className="h-56 overflow-hidden rounded-2xl">
       <img
-        src="../src/assets/images/cat1 (2).jpg"
+        src="/images/games/cat1 (2).jpg"
         alt="Category"
         className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
       />
@@ -452,7 +452,7 @@ const upcomingGames = games.filter((game) =>
      
 
       <div className=" w-full lg:hidden items-center">
-        <img className="w-auto" src="../src/assets/images/mb-war.png" />
+        <img className="w-auto" src="/images/games/mb-war.png" />
       </div>
     </div>
   </section>
@@ -651,7 +651,7 @@ const upcomingGames = games.filter((game) =>
               <div className="flex gap-2 mt-2">
                 <img
                   className=" h-5 w-5 object-contain"
-                  src="../src/assets/images/dateicon.png"
+                  src="/images/games/dateicon.png"
                 />
                 <span className="text-[#979797] break-all">{game.releaseDate}</span>
               </div>
@@ -724,7 +724,7 @@ const upcomingGames = games.filter((game) =>
       </div>
     </div>
     <div className=" hidden lg:block lg:w-1/2 h-100 relative">
-      <img className="w-full object-cover h-100" src="../src/assets/images/CTA.png" />
+      <img className="w-full object-cover h-100" src="/images/games/CTA.png" />
       <div className="absolute inset-0 bg-gradient-to-tl bg-gradient-to-br from-header via-transparent to-transparent"></div>
     </div>
   </div>
@@ -740,12 +740,12 @@ const upcomingGames = games.filter((game) =>
   <div className="mt-10 flex justify-between slider  overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide md:p-12">
     <div className=" relative w-70 shrink-0 h-80">
       <div className="absolute inset-0   mt-3  -ml-3                 ">
-        <img src="../src/assets/images/Vector 8.png" />
+        <img src="/images/games/Vector 8.png" />
       </div>
-      <div className="absolute inset-4                  flex flex-col items-center justify-center p-8 rotate-3 bg-[url('../src/assets/images/Vector9.png')] bg-cover bg-center">
+      <div className="absolute inset-4                  flex flex-col items-center justify-center p-8 rotate-3 bg-[url('/images/games/Vector9.png')] bg-cover bg-center">
         <img
           className="w-20 h-20 object-cover rounded-full -mt-10 "
-          src="../src/assets/images/customer1.jpg"
+          src="/images/games/customer1.jpg"
         />
         <h2 className="mt-4 text-3xl font-bold text-white">Leo</h2>
         <div className="text-orange-500 text-xl">★★★★☆</div>
@@ -756,12 +756,12 @@ const upcomingGames = games.filter((game) =>
     </div>
     <div className=" relative w-80 shrink-0 h-90">
       <div className="absolute inset-0  mt-3                   ">
-        <img className="object-cover" src="../src/assets/images/Vector2-2.png" />
+        <img className="object-cover" src="/images/games/Vector2-2.png" />
       </div>
-      <div className="absolute inset-3 -ml-10                  flex flex-col items-center justify-center p-8 bg-[url('../src/assets/images/Vector2-1.png')] bg-cover bg-center">
+      <div className="absolute inset-3 -ml-10                  flex flex-col items-center justify-center p-8 bg-[url('/images/games/Vector2-1.png')] bg-cover bg-center">
         <img
           className="w-20 h-20 object-cover rounded-full -mt-10 "
-          src="../src/assets/images/customer2.jpg"
+          src="/images/games/customer2.jpg"
         />
         <h2 className="mt-4 text-3xl font-bold text-white">Hannah Schmitt</h2>
         <div className="text-orange-500 text-xl">★★★★☆</div>
@@ -774,12 +774,12 @@ const upcomingGames = games.filter((game) =>
     </div>
     <div className=" relative w-70 shrink-0 h-80">
       <div className="absolute inset-0   mt-3  -mr-3                 ">
-        <img src="../src/assets/images/Vector3-1.png" />
+        <img src="/images/games/Vector3-1.png" />
       </div>
-      <div className="absolute inset-4                  flex flex-col items-center justify-center p-8 rotate-3 bg-[url('../src/assets/images/Vector3-2.png')] bg-cover bg-center">
+      <div className="absolute inset-4                  flex flex-col items-center justify-center p-8 rotate-3 bg-[url('/images/games/Vector3-2.png')] bg-cover bg-center">
         <img
           className="w-20 h-20 object-cover rounded-full -mt-10 "
-          src="../src/assets/images/customer3.jpg"
+          src="/images/games/customer3.jpg"
         />
         <h2 className="mt-4 text-3xl font-bold text-white">Alex</h2>
         <div className="text-orange-500 text-xl">★★★★☆</div>
@@ -804,38 +804,38 @@ const upcomingGames = games.filter((game) =>
     </p>
   </div>
   <div className="flex gap-3 w-full  justify-between mt-5 overflow-y-auto  md:overflow-y-hidden  scrollbar-hide mx-2">
-    <div className="col-span-2 w-[80%]  lg:w-1/2 gap-5 shrink-0 flex           bg-[url('../src/assets/images/post1.jpg')] bg-no-repeat bg-cover rounded  items-end  p-4 md:h-80 h-40 ">
+    <div className="col-span-2 w-[80%]  lg:w-1/2 gap-5 shrink-0 flex           bg-[url('/images/games/post1.jpg')] bg-no-repeat bg-cover rounded  items-end  p-4 md:h-80 h-40 ">
       <p className="font-semibold">
         FC25 Prepares for October 2024 Release with Enhanced Realism
       </p>
     </div>
-    <div className=" lg:hidden col-span-2 w-[80%]  lg:w-1/2 gap-5 shrink-0 flex           bg-[url('../src/assets/images/post2.jpg')] bg-no-repeat bg-cover rounded  items-end  p-4 md:h-80 h-40 ">
+    <div className=" lg:hidden col-span-2 w-[80%]  lg:w-1/2 gap-5 shrink-0 flex           bg-[url('/images/games/post2.jpg')] bg-no-repeat bg-cover rounded  items-end  p-4 md:h-80 h-40 ">
       <p className="font-semibold">
         FC25 Prepares for October 2024 Release with Enhanced Realism
       </p>
     </div>
-    <div className=" lg:hidden col-span-2 w-[80%]  lg:w-1/2 gap-5 shrink-0 flex           bg-[url('../src/assets/images/post3.jpg')] bg-no-repeat bg-cover rounded  items-end  p-4 md:h-80 h-40 ">
+    <div className=" lg:hidden col-span-2 w-[80%]  lg:w-1/2 gap-5 shrink-0 flex           bg-[url('/images/games/post3.jpg')] bg-no-repeat bg-cover rounded  items-end  p-4 md:h-80 h-40 ">
       <p className="font-semibold">
         FC25 Prepares for October 2024 Release with Enhanced Realism
       </p>
     </div>
     <div className=" w-full hidden lg:grid grid-cols-2 lg:grid-cols-2 lg:w-1/2 gap-5 ">
-      <div className=" shrink-0 bg-[url('../src/assets/images/post2.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
+      <div className=" shrink-0 bg-[url('/images/games/post2.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
         <p className="font-semibold">
           FC25 Prepares for October 2024 Release with Enhanced Realism
         </p>
       </div>
-      <div className=" shrink-0 bg-[url('../src/assets/images/post3.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
+      <div className=" shrink-0 bg-[url('/images/games/post3.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
         <p className="font-semibold">
           The Witcher 4 Expected to Bring Back Fan-Favorite Characters
         </p>
       </div>
-      <div className=" shrink-0 bg-[url('../src/assets/images/post4.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
+      <div className=" shrink-0 bg-[url('/images/games/post4.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
         <p className="font-semibold">
           Marvel’s Wolverine Set for an Epic 2025 Launch on PS5
         </p>
       </div>
-      <div className=" shrink-0 bg-[url('../src/assets/images/post5.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
+      <div className=" shrink-0 bg-[url('/images/games/post5.jpg')] bg-no-repeat bg-cover rounded flex items-end  p-4">
         <p className="font-semibold">
           Star Wars Outlaws Combines Open-World Action and Storytelling
         </p>

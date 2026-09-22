@@ -381,7 +381,7 @@ console.log(country || "Loading...")
             onClick={() => setShowSettings(!showSettings)}
             className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-300 hover:text-orange-500 hover:bg-[#262930] transition-all cursor-pointer"
           >
-            <img src={profilePic || "../src/assets/images/customer2 (2).jpg"} className="w-10 h-10 object-cover border-3 border-white rounded-full" />
+            <img src={profilePic || "/images/games/customer2 (2).jpg"} className="w-10 h-10 object-cover border-3 border-white rounded-full" />
           </button>
 
           {/* Dropdown */}
@@ -490,7 +490,7 @@ console.log(country || "Loading...")
             onClick={() => setShowSettings(!showSettings)}
             className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-300 hover:text-orange-500 hover:bg-[#262930] transition-all cursor-pointer"
           >
-            <img src={profilePic || "../src/assets/images/customer2 (2).jpg"} className="w-10 h-10 object-cover border-3 border-white rounded-full" />
+            <img src={profilePic || "/images/games/customer2 (2).jpg"} className="w-10 h-10 object-cover border-3 border-white rounded-full" />
           </button>
 
           {/* Dropdown */}

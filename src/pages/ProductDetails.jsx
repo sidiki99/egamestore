@@ -203,7 +203,7 @@ function handleCheckout(){
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-black flex items-center justify-center">
                       <img
-                        src="../src/assets/images/platform.png"
+                        src="/images/games/platform.png"
                         alt="Platform"
                         className="w-5 h-5"
                       />
@@ -669,7 +669,7 @@ useEffect(() => {
 
           <div className="flex items-center gap-3">
              <img
-            src={item.userImg || "../src/assets/images/game1.png"}
+            src={item.userImg || "/images/games/game1.png"}
             alt="img"
             className="w-8 h-8 rounded-full object-cover ring-2"
           />

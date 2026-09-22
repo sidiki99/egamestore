@@ -5,7 +5,7 @@ const NotFound = () => {
     <div
       className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'url("../src/assets/images/404bg.jfif")',
+        backgroundImage: 'url("/images/games/404bg.jfif")',
       }}
     >
       {/* Dark Overlay */}
@@ -16,7 +16,7 @@ const NotFound = () => {
 
         {/* Character */}
         <img
-          src="../src/assets/images/404man.png"
+          src="/images/games/404man.png"
           alt="404 Character"
           className="w-64 object-contain sm:w-72 md:w-100 lg:w-380 -mt-80"
         />

@@ -142,7 +142,7 @@ export default function ForgotPassword() {
        
         <div className="relative w-full md:w-1/2 min-h-[320px] md:min-h-[520px] overflow-hidden">
           {/* <SentinelArt /> */}
-           <img src="../src/assets/images/lock1.png"></img>
+           <img src="/images/games/lock1.png"></img>
         </div>
 
        
